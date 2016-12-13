@@ -1,0 +1,18 @@
+blockquote {
+  @include opensans-light;
+  border-left: rem(5px) solid $green-e1;
+  font-size: rem(18px);
+  line-height: rem(29px);
+  margin: rem(40px 40px 40px 0);
+  padding: rem(10px 20px);
+
+  @include susy-media(mobileLarge) {
+    font-size: rem(22px);
+    width: 80%;
+  }
+
+  p,
+  ul {
+    margin-bottom: 0;
+  }
+}

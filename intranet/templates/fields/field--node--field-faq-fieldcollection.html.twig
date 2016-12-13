@@ -1,0 +1,14 @@
+{#
+/**
+ * @file
+ * Frederiksberg's theme implementation to faq display.
+ *
+ * @see template_preprocess_field()
+ */
+#}
+<div class="block-accordion__item js-block-accordion__item">
+  {% for item in items %}
+    <a href="#" class="block-accordion__header js-block-accordion__header">{{ item.content.field_faq_question[0] }}</a>
+    <div class="block-accordion__content js-block-accordion__content">{{ item.content.field_faq_answer[0] }}</div>
+  {% endfor %}
+</div>

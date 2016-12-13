@@ -1,0 +1,59 @@
+{% block list %}
+  <div class="container">
+    <table>
+      <caption>Lederjob</caption>
+      <thead>
+        <tr>
+          <th class="header headerSortUp"><a href="#">Stilling</a></th>
+          <th class="header headerSortDown"><a href="#">Afdeling</a></th>
+          <th class="header"><a href="#">Ansøgningsfrist</a></th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for i in 0..4 %}
+          {% if (i==1 or i==3) %}
+            <tr>
+              <td><a href="#">Leder af boligområdet og tværgående koordinering indenfor Sundheds- og Omsorgsområdet</a></td>
+              <td>SSA-Staben</td>
+              <td><b>Frist:</b> 23-09-2016 12:00</td>
+            </tr>
+          {% else %}
+            <tr>
+              <td><a href="#">Klubleder til Skolen på Grundtvigsvej</a></td>
+              <td>Skolen på Grundtvigsvej</td>
+              <td><b>Frist:</b> 07-09-2016</td>
+            </tr>
+          {% endif %}
+        {% endfor %}
+      </tbody>
+    </table>
+
+    <table>
+      <!-- <caption>Lederjob</caption> -->
+      <thead>
+        <tr>
+          <th>Stilling</th>
+          <th>Afdeling</th>
+          <th>Ansøgningsfrist</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for i in 0..4 %}
+          {% if (i==1 or i==3) %}
+            <tr>
+              <td><a href="#">Leder af boligområdet og tværgående koordinering indenfor Sundheds- og Omsorgsområdet</a></td>
+              <td>SSA-Staben</td>
+              <td><b>Frist:</b> 23-09-2016 12:00</td>
+            </tr>
+          {% else %}
+            <tr>
+              <td><a href="#">Klubleder til Skolen på Grundtvigsvej</a></td>
+              <td>Skolen på Grundtvigsvej</td>
+              <td><b>Frist:</b> 07-09-2016</td>
+            </tr>
+          {% endif %}
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+{% endblock %}

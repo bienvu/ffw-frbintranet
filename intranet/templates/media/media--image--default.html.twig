@@ -1,0 +1,31 @@
+{#
+/**
+ * @file
+ * Default theme implementation to present a media entity.
+ *
+ * Available variables:
+ * - name: Name of the media.
+ * - content: Media content.
+ *
+ * @see template_preprocess_media()
+ *
+ * @ingroup themeable
+ */
+#}
+{% if content %}
+  <div class="block-media">
+    <div class="block-media__image">
+      {{ content.field_image }}
+    </div>
+    {% if content.field_media_author['#view_mode'] is not empty   %}
+      <div class="block-media__title">
+        <label style="display: inline;">Photographer:</label>{{ content.field_media_author['#items'][0].value }}
+      </div>
+    {% endif %}
+    {% if content.field_media_description['#view_mode'] is not empty  %}
+      <div class="block-media__description">
+        {{ content.field_media_description['#items'][0].value }}
+      </div>
+    {% endif %}
+  </div>
+{% endif %}

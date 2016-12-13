@@ -1,0 +1,33 @@
+.box-howto {
+  background: $white;
+  margin-bottom: rem(20px);
+  padding: rem(30px 20px 15px);
+
+  @include susy-media(mobileLarge) {
+    padding: rem(31px 50px 15px);
+  }
+
+  p {
+    margin-bottom: rem(20px);
+  }
+
+  hr {
+    margin-left: rem(-20px);
+    margin-right: rem(-20px);
+
+    @include susy-media(mobileLarge) {
+      margin-left: rem(-50px);
+      margin-right: rem(-50px);
+    }
+  }
+
+  .field {
+    &__label {
+      @include opensans-bold;
+      font-size: rem(18.9px);
+      font-weight: normal;
+      line-height: rem(29px);
+      margin-bottom: rem(21px);
+    }
+  }
+}

@@ -1,0 +1,44 @@
+{#
+/**
+ * @file
+ * Template for a 2 column panel layout.
+ *
+ * This template provides a two column panel display layout, with
+ * each column roughly equal in width.
+ *
+ * Variables:
+ * - $id: An optional CSS id to use for the layout.
+ * - $content: An array of content, each item in the array is keyed to one
+ *   panel of the layout. This layout supports the following sections:
+ *   - $content['top']: Content in the top.
+ *   - $content['left']: Content in the left column.
+ *   - $content['right']: Content in the right column.
+ *   - $content['bottom']: Content in the bottom.
+ */
+#}
+{% if content.top is not empty %}
+  <div class="panel-col-top">
+    <div class="container">
+      {{ content.top }}
+    </div>
+  </div>
+{% endif %}
+<div class="content-sidebar {% if content.left is not empty and content.right is not empty %}has-sidebar{% endif %}">
+  <div class="container">
+    <div class="content-sidebar__content">
+      {{ content.left }}
+    </div>
+    <div class="content-sidebar__sidebar">
+      {{ content.right }}
+    </div>
+  </div>
+</div>
+{% if content.bottom is not empty %}
+  <div class="panel-col-bottom">
+    <div class="container">
+      {{ content.bottom }}
+    </div>
+  </div>
+{% endif %}
+
+

@@ -1,0 +1,27 @@
+// VARIABLES
+// Define all variables (aside from colors) in this document. This includes breakpoint, sizes, etc.
+
+//Breakpoints
+$mobile-landscape: 480px;
+$mobile-large: 600px;
+$tablet: 768px;
+$tablet-large: 960px;
+$desktop: 1024px;
+$desktop-wide: 1280px;
+$desktop-small: 1250px;
+$desktop-superwide: 1400px;
+
+// Grid variables
+$container-margin: 10px;
+$container-desktop: 936px;
+
+$column-mobile: 4;
+$column-tablet: 8;
+$column-desktop: 12;
+
+//Font variables
+$base-font-size: 16px;
+$base-line-height: 1.4;
+
+// Add global paths
+$image-path: '../images/';

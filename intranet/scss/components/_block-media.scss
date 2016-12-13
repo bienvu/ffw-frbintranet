@@ -1,0 +1,65 @@
+.block-media {
+  margin-bottom: rem(45px);
+
+  @include susy-media(mobileLandscape) {
+    margin-bottom: rem(44px);
+  }
+
+  &__image {
+    margin-bottom: rem(7px);
+  }
+
+  &__video {
+    margin-bottom: rem(8px);
+
+    a {
+      @extend .icon-control-play;
+      display: inline-block;
+      line-height: 0;
+      position: relative;
+
+      &:before {
+        @extend %icons;
+        color: $white;
+        font-size: rem(50px);
+        left: 50%;
+        position: absolute;
+        text-shadow: rem(1px) rem(1px) rem(14px) rgba($black, .3);
+        top: 50%;
+        transform: translateX(-50%) translateY(-50%);
+
+        @include susy-media(mobileLandscape) {
+          font-size: rem(80px);
+        }
+      }
+
+      &:hover {
+        &:before {
+          color: $primary-color;
+          transition: .5s;
+        }
+      }
+    }
+  }
+
+  &__description,
+  &__title {
+    // @include fousanmd;
+    @include opensans-semibold;
+    font-size: rem(13.5px);
+    padding: rem(5px 5px 3px 0);
+  }
+
+  &__title {
+    label {
+      // @include fousanmd;
+      @include opensans-semibold;
+      font-size: rem(13.5px);
+      padding-right: rem(3px);
+    }
+  }
+
+  &__description {
+    font-style: italic;
+  }
+}

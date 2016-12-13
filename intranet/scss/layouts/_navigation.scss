@@ -1,0 +1,91 @@
+// Navigation.
+.menu-icon {
+  float: left;
+  font-size: rem(35px);
+  padding: rem(8px 15px);
+
+  @include susy-media(tablet) {
+    padding: rem(18px 20px 8px);
+  }
+
+  @include susy-media(desktop-small) {
+    display: none;
+  }
+
+  i {
+    cursor: pointer;
+    line-height: 1.5;
+  }
+}
+
+
+.main-menu {
+  @include susy-media(mobileDesktopSmallOnly) {
+    background: $green-f7;
+  }
+
+  .menu-icon {
+    font-size: rem(20px);
+    padding: rem(15px 40px);
+    width: 100%;
+
+    i {
+      background: $primary-color;
+      border-radius: 100%;
+      color: $white;
+      display: block;
+      height: rem(45px);
+      padding: rem(9px 0);
+      text-align: center;
+      width: rem(45px);
+    }
+  }
+
+  li {
+    @include susy-media(mobileDesktopSmallOnly) {
+      border-bottom: 1px solid $green-e1;
+      clear: both;
+    }
+
+    @include susy-media(desktop-small) {
+      float: left;
+    }
+
+    a {
+      // @include fousandm;
+      @include opensans-bold;
+      color: $primary-color;
+      display: inline-block;
+      font-size: rem(14.5px);
+      height: rem(80px);
+      letter-spacing: rem(.5px);
+      padding: rem(32px 20px 26px);
+      text-transform: uppercase;
+      transition: .35;
+
+      @include susy-media(mobileDesktopSmallOnly) {
+        background: none;
+        display: block;
+        height: auto;
+        font-size: rem(15px);
+        padding: rem(18px 40px 19px);
+        letter-spacing: rem(.9px);
+      }
+
+      &:hover {
+        color: $primary-color-hover;
+      }
+
+      &.is-active {
+        @include susy-media(mobileDesktopSmallOnly) {
+          color: $primary-color-hover;
+        }
+
+        @include susy-media(desktop-small) {
+          background: $primary-color;
+          color: $white;
+        }
+      }
+    }
+  }
+}

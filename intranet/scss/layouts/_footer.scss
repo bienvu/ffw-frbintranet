@@ -1,0 +1,67 @@
+// Footer style
+.footer {
+  background-attachment: scroll;
+  background-color: $green-e1;
+  background-image: linear-gradient(180deg, rgba(225, 235, 221, .5), rgba(225, 235, 221, .5)), url('../images/bird.svg');
+  background-position: 0 0, 100% 0;
+  background-repeat: no-repeat;
+  background-size: auto;
+  border-bottom: rem(2px) solid $black;
+  padding-top: rem(40px);
+  width: 100%;
+
+  @include susy-media(tablet) {
+    bottom: 0;
+    height: rem(500px);
+    left: 0;
+    position: fixed;
+    right: 0;
+  }
+
+  &__wrap {
+    max-width: rem(1400px);
+    margin: 0 auto;
+    padding: rem(0 15px);
+
+    @include susy-media(tablet) {
+      padding: rem(0 30px);
+    }
+  }
+
+  &__item {
+    margin-bottom: rem(40px);
+
+    @include susy-media(tablet) {
+      float: left;
+      padding-right: rem(15px);
+      width: 33.33%;
+    }
+  }
+
+  .block {
+    > h2 {
+      font-size: rem(17px);
+      margin-bottom: rem(8px);
+      line-height: rem(24px);
+    }
+  }
+
+  .block-text {
+    @include susy-media(mobileTabletOnly) {
+      font-size: rem(16px);
+    }
+  }
+}
+
+.page-404 {
+  .footer {
+    @extend %clearfix;
+    background-image: none;
+    border-bottom: 0;
+
+    @include susy-media(tablet) {
+      height: 100%;
+      position: static;
+    }
+  }
+}

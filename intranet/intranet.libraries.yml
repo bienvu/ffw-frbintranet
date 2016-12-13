@@ -1,0 +1,36 @@
+global-styling:
+  version: VERSION
+  js:
+    js/script.js: {}
+  css:
+    global:
+      css/styles.css: {}
+      css/print.css: { media: print }
+
+enquire:
+  version: 2.1.2
+  js:
+    js/lib/enquire.min.js: {}
+  dependencies:
+    - core/jquery
+
+bootstrap-select:
+  version: 1.11.2
+  js:
+    js/lib/bootstrap.min.js: {}
+    js/lib/bootstrap-select.js: {}
+  dependencies:
+    - core/jquery
+
+media.match:
+  version: 2.0.2
+  js:
+    js/lib/media.match.min.js: {}
+  dependencies:
+    - core/jquery
+
+tipso:
+  js:
+    js/lib/tipso.min.js: {}
+  dependencies:
+    - core/jquery

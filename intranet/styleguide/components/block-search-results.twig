@@ -1,0 +1,80 @@
+{% set search_results = [
+    {
+      'title' : 'Borgerstyret personlig assistance, BPA-ordning',
+      'date' : '10. aug 2016',
+      'link' : '<a href="#">EmneoRD</a>',
+      'body' : 'Skoler, institutioner, rådhuset, plejecentre, biblioteker og alle andre dele af Frederiksberg Kommune holder et minuts stilhed klokken 12, hvor vi mindes ofrene i Paris.'
+    },
+    {
+      'title' : 'Borgerstyret personlig assistance, BPA-ordning',
+      'date' : '10. aug 2016',
+      'link' : '<a href="#">Borger</a>',
+      'body' : 'Skoler, institutioner, rådhuset, plejecentre, biblioteker og alle andre dele af Frederiksberg Kommune holder et minuts stilhed klokken 12, hvor vi mindes ofrene i Paris.'
+    },
+    {
+      'title' : 'Borgerstyret personlig assistance, BPA-ordning',
+      'date' : '10. aug 2016',
+      'link' : '<a href="#">EmneoRD</a><a href="#">Borger</a>',
+      'body' : 'Skoler, institutioner, rådhuset, plejecentre, biblioteker og alle andre dele af Frederiksberg Kommune holder et minuts stilhed klokken 12, hvor vi mindes ofrene i Paris.'
+    },
+    {
+      'title' : 'Borgerstyret personlig assistance, BPA-ordning',
+      'date' : '10. aug 2016',
+      'link' : '<a href="#">Borger</a>',
+      'body' : 'Skoler, institutioner, rådhuset, plejecentre, biblioteker og alle andre dele af Frederiksberg Kommune holder et minuts stilhed klokken 12, hvor vi mindes ofrene i Paris.'
+    },
+    {
+      'title' : 'Borgerstyret personlig assistance, BPA-ordning',
+      'date' : '10. aug 2016',
+      'link' : '<a href="#">Borger</a>',
+      'body' : 'Skoler, institutioner, rådhuset, plejecentre, biblioteker og alle andre dele af Frederiksberg Kommune holder et minuts stilhed klokken 12, hvor vi mindes ofrene i Paris.'
+    },
+    {
+      'title' : 'Borgerstyret personlig assistance, BPA-ordning',
+      'date' : '10. aug 2016',
+      'link' : '<a href="#">Borger</a>',
+      'body' : 'Skoler, institutioner, rådhuset, plejecentre, biblioteker og alle andre dele af Frederiksberg Kommune holder et minuts stilhed klokken 12, hvor vi mindes ofrene i Paris.'
+    }
+  ]
+%}
+{% block SearchResults %}
+  <div class="container">
+    <div class="filter-tag">
+      <div class="filter-tag__label">Vælg type</div>
+      <div class="filter-tag__list">
+        <div class="filter-tag__item active"><a href="#">Artikler og nyheder (120)</a></div>
+        <div class="filter-tag__item"><a href="#">Dagsorden eller referater (21)</a></div>
+        <div class="filter-tag__item"><a href="#">Dagsorden eller referater (21)</a></div>
+      </div>
+    </div>
+
+    <div class="search-results">
+      <div class="search-results__top">
+        <h5 class="search-results__info">Viser 1-16 ud af 130 resultater</h5>
+        <div class="search-results__sort-filter">
+          <h5 class="sort-filter__label">Sorte efter:</h5>
+          <div class="sort-filter__list">
+            <div class="sort-filter__item active"><a href="#">Relevans</a></div>
+            <div class="sort-filter__item"><a href="#">Dato</a></div>
+            <div class="sort-filter__item"><a href="#">A-Å</a></div>
+          </div>
+        </div>
+      </div>
+      <div class="search-results__content">
+        <div class="search-results__list">
+          {% for item in search_results %}
+          <div class="search-results__item">
+            <h3 class="search-results__title"><a href="#">{{ item.title }}</a></h3>
+            <div class="meta">
+              <div class="meta__item meta__date">{{ item.date }}</div>
+              <div class="meta__item meta__link">{{ item.link }}</div>
+            </div>
+            <div class="search-results__body"><p><a href="#">{{ item.body }}</a></p></div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+  {% include 'pager.twig' %}
+{% endblock %}

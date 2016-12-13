@@ -1,0 +1,136 @@
+.filter-tag {
+  padding: rem(10px) 0;
+
+  &__label {
+    float: left;
+    font-size: rem(16px);
+    margin-right: rem(20px);
+    padding: rem(11px 0 14px);
+  }
+
+  &__item {
+    display: inline-block;
+
+    a {
+      @include opensans-bold;
+      background-color: $gray-e6;
+      border-radius: rem(5px);
+      display: inline-block;
+      font-size: rem(14px);
+      line-height: rem(24px);
+      margin: rem(12px 10px 12px 0);
+      padding: rem(8px 15px 10px);
+
+      &:hover {
+        background-color: $primary-color-hover;
+        color: $white;
+      }
+    }
+
+    &.active {
+      a {
+        background-color: $primary-color;
+        color: $white;
+
+        &:before {
+          @extend %icons;
+          color: $white;
+          content: '\e910';
+          font-size: rem(17px);
+          padding-right: rem(5px);
+          position: relative;
+          top: rem(1px);
+        }
+      }
+    }
+  }
+}
+
+.search-results {
+  &__top {
+    @extend %clearfix;
+    border-bottom: rem(1px) solid $text-color;
+  }
+
+  &__info {
+    @include susy-media(tablet) {
+      float: left;
+      width: 40%;
+    }
+  }
+
+  &__sort-filter {
+    @include susy-media(tablet) {
+      float: right;
+      width: 60%;
+      text-align: right;
+    }
+  }
+
+  .sort-filter {
+    &__label,
+    &__list {
+      display: inline-block;
+    }
+
+    &__label {
+      margin-bottom: rem(7px);
+    }
+
+    &__item {
+      display: inline-block;
+      margin-left: rem(10px);
+      margin-bottom: rem(7px);
+
+      a {
+        color: $gray-75;
+        text-decoration: underline;
+        font-size: rem(15px);
+
+        &:hover {
+          color: $primary-color-hover;
+        }
+      }
+
+      &.active {
+        a {
+          @include opensans-bold;
+          color: $primary-color;
+        }
+      }
+    }
+  }
+
+  // Search results content
+  &__item {
+    border-bottom: rem(1px) solid $text-color;
+    padding: rem(9px 20px);
+  }
+
+  &__title {
+    margin-bottom: rem(18px);
+  }
+
+  .meta {
+    margin-bottom: rem(16px);
+
+    &__link a {
+      padding-right: rem(8px);
+    }
+  }
+
+  &__body {
+    p {
+      margin-bottom: rem(21px);
+    }
+
+    a {
+      @include opensans-light;
+      color: $text-color;
+
+      &:hover {
+        color: $primary-color-hover;
+      }
+    }
+  }
+}

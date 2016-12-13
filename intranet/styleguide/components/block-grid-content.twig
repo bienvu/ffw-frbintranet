@@ -1,0 +1,112 @@
+{% set grid_content = [
+    {
+      'grid_content_link' : 'NYHED',
+      'grid_content_date' : '18. aug 2016',
+      'grid_content_title' : 'Nye velkomstboliger for flygtninge i Centerparken i 2017',
+      'grid_content_content' : 'Rehabiliteringsenhedens lokaler omdannes til midlertidige velkomstboliger for flygtninge i løbet af foråret 2017.'
+    },
+    {
+      'grid_content_link' : 'NYHED',
+      'grid_content_date' : '18. aug 2016',
+      'grid_content_title' : 'Trafikændringer på lørdag',
+      'grid_content_content' : 'Et forslag om, at skraldebilerne kommer ½ time tidligere end nu, er i høring frem til den 28. august.'
+    },
+    {
+      'grid_content_link' : 'NYHED',
+      'grid_content_date' : '18. aug 2016',
+      'grid_content_title' : 'Skraldebiler kommer tidligere',
+      'grid_content_content' : 'Et forslag om, at skraldebilerne kommer ½ time tidligere end nu, er i høring frem til den 28. august.'
+    }
+  ]
+%}
+
+{% block blockGridContent %}
+  <div class="container">
+    <div class="block-grid-content {{ grid_content_class }}">
+      <div class="block-grid-content__list">
+        {% for item in grid_content %}
+          <div class="block-grid-content__item">
+            <div class="meta">
+              <div class="meta__item meta__link"><a href="#">{{ item.grid_content_link }}</a></div>
+              <div class="meta__item meta__date">{{ item.grid_content_date }}</div>
+            </div>
+            {% if item.grid_content_image is not empty %}<div class="block-grid-content__image"><img src="{{ item.grid_content_image }}"></div>{% endif %}
+            <h3 class="block-grid-content__title"><a href="#">{{ item.grid_content_title }}</a></h3>
+            <div class="block-grid-content__content"><a href="#"><p>{{ item.grid_content_content }}</p></a></div>
+          </div>
+        {% endfor %}
+      </div>
+      <div class="block-grid-content__link"><a class="btn" href="#">Alle nyheder</a></div>
+    </div>
+  </div>
+{% endblock %}
+
+<div class="container"><h1>has image</h1></div>
+{% set grid_content = [
+    {
+      'grid_content_link' : '',
+      'grid_content_date' : '',
+      'grid_content_image' : 'https://unsplash.it/448/188',
+      'grid_content_title' : 'Nye velkomstboliger for flygtninge i Centerparken i 2017',
+      'grid_content_content' : 'Rehabiliteringsenhedens lokaler omdannes til midlertidige velkomstboliger for flygtninge i løbet af foråret 2017.'
+    },
+    {
+      'grid_content_link' : '',
+      'grid_content_date' : '',
+      'grid_content_image' : 'https://unsplash.it/448/188',
+      'grid_content_title' : 'Trafikændringer på lørdag',
+      'grid_content_content' : 'Et forslag om, at skraldebilerne kommer ½ time tidligere end nu, er i høring frem til den 28. august.'
+    },
+    {
+      'grid_content_link' : '',
+      'grid_content_date' : '',
+      'grid_content_image' : 'https://unsplash.it/448/188',
+      'grid_content_title' : 'Skraldebiler kommer tidligere',
+      'grid_content_content' : 'Et forslag om, at skraldebilerne kommer ½ time tidligere end nu, er i høring frem til den 28. august.'
+    },
+    {
+      'grid_content_link' : '',
+      'grid_content_date' : '',
+      'grid_content_image' : 'https://unsplash.it/448/188',
+      'grid_content_title' : 'Nye velkomstboliger for flygtninge i Centerparken i 2017',
+      'grid_content_content' : 'Rehabiliteringsenhedens lokaler omdannes til midlertidige velkomstboliger for flygtninge i løbet af foråret 2017.'
+    },
+    {
+      'grid_content_link' : '',
+      'grid_content_date' : '',
+      'grid_content_image' : 'https://unsplash.it/448/188',
+      'grid_content_title' : 'Trafikændringer på lørdag',
+      'grid_content_content' : 'Et forslag om, at skraldebilerne kommer ½ time tidligere end nu, er i høring frem til den 28. august.'
+    },
+    {
+      'grid_content_link' : '',
+      'grid_content_date' : '',
+      'grid_content_image' : 'https://unsplash.it/448/188',
+      'grid_content_title' : 'Skraldebiler kommer tidligere',
+      'grid_content_content' : 'Et forslag om, at skraldebilerne kommer ½ time tidligere end nu, er i høring frem til den 28. august.'
+    }
+  ]
+%}
+{% set grid_content_class = 'block-grid-content--has-image' %}
+
+{% block blockGridContent %}
+  <div class="container">
+  <div class="block-grid-content {{ grid_content_class }}">
+    <div class="block-grid-content__list">
+      {% for item in grid_content %}
+        <div class="block-grid-content__item">
+          {% if item.grid_content_link and item.grid_content_date is not empty %}
+            <div class="meta">
+              <div class="meta__item meta__link"><a href="#">{{ item.grid_content_link }}</a></div>
+              <div class="meta__item meta__date">{{ item.grid_content_date }}</div>
+            </div>
+          {% endif %}
+          {% if item.grid_content_image is not empty %}<div class="block-grid-content__image"><img src="{{ item.grid_content_image }}"></div>{% endif %}
+          <h3 class="block-grid-content__title"><a href="#">{{ item.grid_content_title }}</a></h3>
+          <div class="block-grid-content__content"><a href="#"><p>{{ item.grid_content_content }}</p></a></div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+  </div>
+{% endblock %}

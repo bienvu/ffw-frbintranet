@@ -1,0 +1,46 @@
+{#
+/**
+ * @file
+ * Template for a 1 column panel layout.
+ *
+ * This template provides a two column panel display layout, with
+ * each column roughly equal in width.
+ *
+ * Variables:
+ * - $id: An optional CSS id to use for the layout.
+ * - $content: An array of content, each item in the array is keyed to one
+ *   panel of the layout. This layout supports the following sections:
+ *   - $content['top']: Content in the top.
+ *   - $content['middle']: Content in the Middle column.
+ *   - $content['middle_full']: Content in the middle full column.
+ *   - $content['bottom']: Content in the bottom.
+ */
+#}
+{% if content.top is not empty %}
+<div class="panel-col-top">
+  <div class="container">
+    {{ content.top }}
+  </div>
+</div>
+{% endif %}
+{% if content.middle is not empty %}
+<div class="panel-col-middle">
+  <div class="container">
+    {{ content.middle }}
+  </div>
+</div>
+{% endif %}
+{% if content.middle_full is not empty %}
+  <div class="panel-col-middle-full">
+    {{ content.middle_full }}
+  </div>
+{% endif %}
+{% if content.bottom is not empty %}
+  <div class="panel-col-bottom">
+    <div class="container">
+      {{ content.bottom }}
+    </div>
+  </div>
+{% endif %}
+
+

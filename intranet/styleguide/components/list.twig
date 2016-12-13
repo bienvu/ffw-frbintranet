@@ -1,0 +1,60 @@
+{% block list %}
+  <div class="container">
+    <div class="layout-content">
+      <h3>Ul List Default</h3>
+      <div class="field--name-body">
+        <ul>
+          {% for i in 0..4 %}
+            <li>Rådgive, støtte og vejlede i samarbejde med den enkelte beboer, herunder vedligeholdelse og udvikling af personlige færdigheder ud fra beboerens forudsætninger. </li>
+          {% endfor %}
+        </ul>
+      </div>
+      <br>
+      <h3>Ol List Default</h3>
+      <div class="field--name-body">
+        <ol>
+          {% for i in 0..4 %}
+            <li>Rådgive, støtte og vejlede i samarbejde med den enkelte beboer, herunder vedligeholdelse og udvikling af personlige færdigheder ud fra beboerens forudsætninger. </li>
+          {% endfor %}
+        </ol>
+      </div>
+    </div>
+    <br>
+    <h3>List inline, tiny</h3>
+    <ul class="list--inline list--tiny">
+      {% for i in 0..4 %}
+        <li><a href="#">List Item</a></li>
+      {% endfor %}
+    </ul>
+    <h3>List inline</h3>
+    <ul class="list--inline">
+      {% for i in 0..4 %}
+        <li><a href="#">List Item</a></li>
+      {% endfor %}
+    </ul>
+    <h3>List Default</h3>
+    <ul class="list">
+      {% for i in 0..4 %}
+        <li><a href="#">Nyheder og presserum</a></li>
+      {% endfor %}
+    </ul>
+    <br>
+    <h3>List icon, List small</h3>
+    <ul class="list--icon list--small">
+      {% for i in 0..4 %}
+        {% if (i == 2)%}
+          <li class="active">
+            <a href="#">Nyheder og presserum</a>
+            <ul class="list">
+              {% for i in 0..2 %}
+                <li class="{% if i ==1 %}active{% endif %}"><a href="#">List Item</a></li>
+              {% endfor %}
+            </ul>
+          </li>
+        {% else %}
+          <li><a href="#">Nyheder og presserum</a></li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  </div>
+{% endblock %}

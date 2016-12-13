@@ -1,0 +1,22 @@
+{#
+/**
+ * @file
+ * Frederiksberg's theme implementation to faq display.
+ *
+ * @see template_preprocess_node()
+ */
+#}
+
+<div class="block-accordion">
+  {% if (faq_hide_front_end_title == 0) %}
+    {% if faq_front_end_title != '' %}
+      <h3>{{faq_front_end_title}}</h3>
+    {% else %}
+      <h3>{{ "Frequently asked questions"|t }}</h3>
+    {% endif %}
+  {% endif %}
+  <div class="block-accordion__close-button js-show-all">
+    {{ "Expand all"|t }} <i class="icon-angle-down"></i>
+  </div>
+  {{ content.field_faq_fieldcollection }}
+</div>

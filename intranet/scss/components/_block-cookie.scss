@@ -1,0 +1,73 @@
+.block-cookie {
+  background-color: rgba(247, 252, 245, .95);
+  box-shadow: 0 0 rem(25px) 0 rgba(0, 0, 0, .15);
+  position: relative;
+
+  @include susy-media(mobileOnly) {
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    right: 0;
+    z-index: 10;
+  }
+
+  &__inner {
+    @extend %clearfix;
+    padding: rem(15px 0 20px);
+    position: relative;
+
+    @include susy-media(tablet-large) {
+      padding: rem(15px 30px 20px);
+    }
+  }
+
+  &__content {
+    padding-right: rem(60px);
+
+    @include susy-media(mobileLandscape) {
+      padding-right: rem(80px);
+    }
+
+    @include susy-media(tablet-large) {
+      padding-right: rem(100px);
+    }
+
+    h4 {
+      margin-bottom: rem(8px);
+    }
+
+    p {
+      // @include fousanno;
+      font-size: rem(15px);
+      line-height: rem(22px);
+      margin-bottom: rem(20px);
+    }
+
+    a {
+      font-size: rem(13px);
+    }
+  }
+
+  &__button {
+    cursor: pointer;
+    position: absolute;
+    right: rem(0);
+    top: rem(20px);
+
+    @include susy-media(tablet-large) {
+      right: rem(50px);
+      top: rem(39px);
+    }
+
+    i {
+      background: $primary-color;
+      border-radius: 100%;
+      color: $white;
+      display: block;
+      height: rem(45px);
+      line-height: 2.7;
+      text-align: center;
+      width: rem(45px);
+    }
+  }
+}

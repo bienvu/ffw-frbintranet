@@ -1,0 +1,81 @@
+
+.bootstrap-select {
+  @include opensans;
+  position: relative;
+
+  select {
+    display: none;
+  }
+
+  .pull-left {
+    font-size: rem(15.5px);
+  }
+
+  .btn {
+    @include opensans-semibold;
+  }
+
+  .dropdown-toggle {
+    background-color: $white;
+    border-radius: rem(3px);
+    border: rem(1px) solid $gray-e6;
+    color: $primary-color;
+    font-size: rem(16px);
+    height: rem(48px);
+    line-height: rem(18px);
+    min-width: inherit;
+    padding: rem(12px 35px 11px 12px);
+    position: relative;
+
+    .bs-caret {
+      height: rem(14px);
+      position: absolute;
+      right: rem(15px);
+      top: 50%;
+      width: rem(14px);
+      margin-top: rem(-7px);
+
+      span:before {
+        font-weight: bold;
+      }
+    }
+  }
+
+  .dropdown-menu.open {
+    background: $white;
+    border-radius: rem(3px);
+    border: rem(1px) solid $green-e1;
+    box-shadow: rem(0 1px 10px 0) rgba(0, 0, 0, .05);
+    cursor: pointer;
+    display: none;
+    left: 0;
+    min-width: rem(140px);
+    position: absolute;
+    top: rem(47px);
+
+    a {
+      color: $gray-22;
+      display: block;
+      font-size: rem(14px);
+      padding: rem(10px 20px);
+
+      &:hover {
+        background: $green-e1;
+      }
+    }
+
+    ul li {
+      text-indent: 0;
+
+      &:before {
+        display: none;
+      }
+    }
+  }
+
+  &.open {
+    .dropdown-menu {
+      display: block;
+    }
+  }
+}

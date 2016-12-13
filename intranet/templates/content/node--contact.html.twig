@@ -1,0 +1,43 @@
+<h2>{{ 'Contact'|t}} </h2>
+
+<div class="grid-2col block-text">
+  <div class="grid-2col__item">
+    <h4>{{contact.contact_headline}}</h4>
+    {% if (contact.address_line1) %}
+      {{contact.address_line1}}<br>
+    {% endif %}
+    {% if (contact.address_line2) %}
+      {{contact.address_line2}}<br>
+    {% endif %}
+    {{contact.postal_code}} {{contact.city}}
+    <br>
+    {% if (contact.email) %}
+      <a class="underline" href="mailto:{{contact.email}}">{{contact.email}}</a>
+      <br>
+    {% endif %}
+    {% if contact.secure_mail is not empty %}
+      {% for item in contact.secure_mail %}
+        <a class="underline" title={{item.title}} href="{{item.url}}">{{item.title}}</a>
+        <br>
+      {% endfor %}
+    {% endif %}
+    <div class="margin-bottom-25"><b>{{'Telephone'|t}}::</b> {{contact.phone}}</div>
+    {{contact.description|raw}}
+  </div>
+  <div class="grid-2col__item">
+    <h4>{{contact.contact_by_phone_header}}</h4>
+    <p class="margin-bottom-25">
+      {% for item in contact.phone_hours %}
+        {{item.day}}. {{item.hour}}
+        <br>
+      {% endfor %}
+    </p>
+    <h4>{{contact.contact_personally_header}}</h4>
+    <p class="margin-bottom-25">
+      {% for item in contact.personally_hours %}
+        {{item.day}}. {{item.hour}}
+        <br>
+      {% endfor %}
+    </p>
+  </div>
+</div>

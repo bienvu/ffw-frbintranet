@@ -1,0 +1,15 @@
+  {#
+/**
+ * @file
+ * Frederiksberg's theme implementation to display a node.
+ *
+ * @see template_preprocess_node()
+ */
+#}
+
+<article class="factbox factbox--small factbox--light-green">
+  {% if disable_button == false %}
+    <div class="margin-bottom-25"><a class="btn btn--large" href="{{ job_url }}" target="_blank">{{ "Send application"|t }}</a></div>
+  {% endif %}
+  {{ content.field_vacancy_facts }}
+</article>

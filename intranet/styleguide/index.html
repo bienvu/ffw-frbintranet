@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <link rel="shortcut icon" href="../favicon.ico">
+  <title>Intranet -</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/app.css">
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body class="index-page">
+
+  <div class="component--list">
+    <div class="component--list--header">
+      <h2 class="component--title">Components List</h2>
+      <a title="Show List" class="show-list">+</a>
+      <a title="Hide List" style="display:none" class="hide-list">-</a>
+    </div>
+    <div class="component--list--content">
+      <ul>
+        <li class="component--list--item">
+          <a class="show-subitem">Basic Elements</a>
+          <ul class="element-invisible">
+            <li class="component--list--item sub"><a href="#headings"><span class="small-tag"></span> headings</a>
+            </li>
+            <li class="component--list--item sub"><a href="#paragraphs"><span class="small-tag"></span> paragraphs</a>
+            </li>
+            <li class="component--list--item sub"><a href="#links"><span class="small-tag"></span> links</a>
+            </li>
+            <li class="component--list--item sub"><a href="#form"><span class="small-tag"></span> form</a>
+            </li>
+          </ul>
+        </li>
+        <li class="component--list--item">
+          <a class="show-subitem">Helper Classes</a>
+          <ul class="element-invisible">
+            <li class="component--list--item sub"><a href="#icon"><span class="small-tag"></span> icon</a>
+            </li>
+            <li class="component--list--item sub"><a href="#background"><span class="small-tag"></span> background</a>
+            </li>
+            <li class="component--list--item sub"><a href="#button"><span class="small-tag">ST-09</span> button</a>
+            </li>
+            <li class="component--list--item sub"><a href="#grid-column"><span class="small-tag"></span> grid column</a>
+            </li>
+          </ul>
+        </li>
+        <li class="component--list--item">
+          <a class="show-subitem">Components</a>
+          <ul class="element-invisible">
+            <li class="component--list--item sub"><a href="#list"><span class="small-tag"></span> list</a>
+            </li>
+            <li class="component--list--item sub"><a href="#table"><span class="small-tag"></span> table</a>
+            </li>
+            <li class="component--list--item sub"><a href="#block-text"><span class="small-tag"></span> block text</a>
+            </li>
+            <li class="component--list--item sub"><a href="#block-media"><span class="small-tag">FK-101</span> block media</a>
+            </li>
+            <li class="component--list--item sub"><a href="#factbox"><span class="small-tag">FK-100</span> factbox</a>
+            </li>
+            <li class="component--list--item sub"><a href="#block-social"><span class="small-tag">FK-103</span> block social</a>
+            </li>
+            <li class="component--list--item sub"><a href="#breadcrumb"><span class="small-tag">FK-102</span> breadcrumb</a>
+            </li>
+            <li class="component--list--item sub"><a href="#block-list-teaser"><span class="small-tag">FK-104</span> block list teaser</a>
+            </li>
+            <li class="component--list--item sub"><a href="#block-accordion"><span class="small-tag">FK-107</span> block accordion</a>
+            </li>
+            <li class="component--list--item sub"><a href="#block-navigation"><span class="small-tag">FK-109</span> block navigation</a>
+            </li>
+            <li class="component--list--item sub"><a href="#block-profile"><span class="small-tag">FK-108</span> block profile</a>
+            </li>
+            <li class="component--list--item sub"><a href="#block-navigation-content"><span class="small-tag">FK-111</span> block navigation content</a>
+            </li>
+            <li class="component--list--item sub"><a href="#hero-banner"><span class="small-tag">FK-112</span> hero banner</a>
+            </li>
+            <li class="component--list--item sub"><a href="#block-quote"><span class="small-tag">FK-116</span> block quote</a>
+            </li>
+            <li class="component--list--item sub"><a href="#404"><span class="small-tag">FK-113</span> 404</a>
+            </li>
+            <li class="component--list--item sub"><a href="#block-grid-content"><span class="small-tag">FK-115</span> block grid content</a>
+            </li>
+            <li class="component--list--item sub"><a href="#box-howto"><span class="small-tag">FK-35</span> box howto</a>
+            </li>
+            <li class="component--list--item sub"><a href="#tooltip"><span class="small-tag">FK-40</span> tooltip</a>
+            </li>
+            <li class="component--list--item sub"><a href="#block-cookie"><span class="small-tag">FK-53</span> block cookie</a>
+            </li>
+            <li class="component--list--item sub"><a href="#pager"><span class="small-tag">FK-61</span> pager</a>
+            </li>
+            <li class="component--list--item sub"><a href="#block-search-results"><span class="small-tag">FK-62</span> block search results</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="top-pane">
+    <ul class="devices inline-list text-center">
+      <li class="device"><a href="#full" class="js-choose-device active" title="Full"><i class="fa fa-television"></i></a>
+      </li>
+      <li class="device"><a href="#desktop" class="js-choose-device" title="Desktop"><i class="fa fa-laptop"></i></a>
+      </li>
+      <li class="device"><a href="#tablet" class="js-choose-device" title="Tablet"><i class="fa fa-tablet"></i></a>
+      </li>
+      <li class="device"><a href="#mobile" class="js-choose-device" title="Mobile"><i class="fa fa-mobile"></i></a>
+      </li>
+    </ul>
+  </div>
+  <div class="text-center">
+    <iframe class="device-mode" name='styleguide' id="styleguide" src="sg.html" frameborder="0" border="0" cellspacing="0" style="border-style: none;"></iframe>
+  </div>
+
+  <script src="script/jquery.min.js"></script>
+  <script src="https://use.fontawesome.com/9fb736d1ce.js"></script>
+  <script src="script/styleguide.js"></script>
+</body>
+
+</html>
+
+

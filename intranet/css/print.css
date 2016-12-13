@@ -1,0 +1,175 @@
+header,
+footer,
+.content-sidebar__sidebar,
+.media-video,
+ul.tabs,
+.content-sidebar__sidebar,
+video,
+embed,
+iframe,
+.breadcrumb,
+.media-video,
+.messages {
+  display: none;
+}
+
+.content-sidebar__content,
+.content-sidebar,
+.content-sidebar--sidebar-left {
+  padding: 0!important;
+  margin: 0!important;
+  width: 100% !important;
+  float: none;
+}
+
+.container {
+  margin: 0 auto !important;;
+  max-width: 100% !important;;
+}
+
+
+@page {
+  margin-bottom: 70px;
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-top: 55px;
+  max-width: inherit;
+  size: auto;
+  width: 100%;
+}
+
+.main {
+  border-bottom: 0;
+}
+
+body {
+  font-size: 14px;
+  margin: 0;
+}
+
+p {
+  margin-bottom: 20px;
+}
+
+body {
+  padding-top: 0 !important;
+}
+
+.box-howto {
+  padding: 0;
+}
+
+.text-large {
+  margin: 20px 0;
+  font-size: 16px;
+}
+
+.block-media {
+  margin-bottom: 15px !important;
+}
+
+.block-media img {
+  max-width: 90%;
+}
+
+.factbox--light-green,
+.bg--light-green {
+  background-color: unset;
+  box-shadow: inset 0 0 0 1000px #e1ebdd;
+}
+
+.btn,
+input[type='submit'],
+button {
+  -moz-print-color-adjust: exact;
+  -ms-print-color-adjust: exact;
+  -webkit-print-color-adjust: exact;
+  background-color: #00502d !important;
+  color: #fff !important;
+  text-indent: -10000px;
+  text-shadow: 5000px 0 0 #fff;
+}
+
+input[type="radio"]:checked + label:after {
+  -webkit-print-color-adjust: exact;
+  background-color: unset;
+  box-shadow: inset 0 0 0 1000px #648f14;
+}
+
+.btn {
+  background-color: unset;
+  box-shadow: inset 0 0 0 1000px #00502d;
+}
+
+.btn--bg-red {
+  background-color: unset;
+  box-shadow: inset 0 0 0 1000px #b10000;
+}
+
+.btn--bg-gray {
+  background-color: unset;
+  box-shadow: inset 0 0 0 1000px #e6e6e6;
+  color: #00502d !important;
+  text-indent: -10000px;
+  text-shadow: 5000px 0 0 #00502d;
+}
+
+.btn--large {
+  min-width: 200px;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+.btn.dropdown-toggle,
+button.dropdown-toggle {
+  background-color: #ffffff !important;
+  box-shadow: inset 0 0 0 50px #ffffff;
+  color: #00502d !important;
+  text-indent: 0;
+  text-shadow: 0;
+}
+
+@media print and (-webkit-min-device-pixel-ratio:0) {
+  .btn,
+  input[type='submit'],
+  button {
+    text-indent: 0;
+  }
+}
+
+.factbox--white {
+  padding: 20px 0;
+}
+
+hr {
+  -webkit-print-color-adjust: exact;
+  background-color: unset;
+  box-shadow: inset 0 0 0 1000px #f5f5f5;
+}
+
+.form-date {
+  -webkit-print-color-adjust:exact;
+  background-image: url('../images/icon-calendar.png');
+}
+
+.block-list-teaser__item {
+  padding-bottom: 0!important;
+  margin-bottom: 20px;
+}
+
+.block-list-teaser__title {
+  margin-top: 0;
+}
+
+.layout-content .field--name-body ul li:before,
+.layout-content .field--name-field-howto ul li:before,
+.layout-content .block-accordion__content ul li:before,
+.footer .field--name-body ul li:before,
+.footer .field--name-field-howto ul li:before,
+.footer .block-accordion__content ul li:before {
+  -webkit-print-color-adjust: exact;
+  background-color: unset;
+  border-radius: 100%;
+  box-shadow: inset 0 0 0 1000px #3f3f3f;
+  overflow: hidden;
+}

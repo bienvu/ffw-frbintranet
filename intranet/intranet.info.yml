@@ -1,0 +1,24 @@
+name: Intranet
+type: theme
+description: 'This theme uses Gulp. See README.md for software requirements. Type "Gulp watch" to compile files.'
+package: Intranet
+core: 8.x
+base theme: classy
+libraries:
+  - fk_theme/enquire
+  - fk_theme/modernizr
+  - fk_theme/media.match
+  - fk_theme/bootstrap-select
+  - fk_theme/tipso
+  - fk_theme/global-styling
+
+regions:
+  header: 'Header Left'
+  header_right: 'Header Right'
+  header_bottom: 'Header Bottom'
+  content: 'Content'
+  footer: 'Footer'
+  footer_col_one: 'Footer Col One'
+  footer_col_two: 'Footer Col Two'
+  footer_col_three: 'Footer Col Three'
+

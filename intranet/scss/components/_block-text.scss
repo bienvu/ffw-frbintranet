@@ -1,0 +1,23 @@
+// Block text.
+.block-text {
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 0 0 rem(8px);
+  }
+
+  p {
+    margin-bottom: rem(19px);
+    line-height: rem(25px);
+  }
+
+  .btn {
+    margin-bottom: rem(31px);
+  }
+
+  .margin-bottom-25 {
+    margin-bottom: rem(25px);
+  }
+}

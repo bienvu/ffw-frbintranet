@@ -1,0 +1,29 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a block share & print.
+ *
+ * @see template_preprocess_block()
+ *
+ * @ingroup themeable
+ */
+#}
+<div class="factbox factbox--small">
+  <ul class="block-social__list list--inline list--tiny">
+    {% if node %}
+      <li class="block-social__item block-social__list-sub js-toggle__list-sub"><a href="#">{{ "Share"|t }}</a>
+        <ul>
+          <li><a href="#" data-share-url="http://www.facebook.com/sharer.php?u={{url}}" class="social-share-item">{{ "Facebook"|t }}</a></li>
+          <li><a href="#" data-share-url="http://www.linkedin.com/shareArticle?mini=true&amp;url={{url}}" class="social-share-item">{{ "Linkedin"|t }}</a></li>
+          <li><a href="#" data-share-url="https://twitter.com/share?url={{url}}" class="social-share-item">{{ "Twitter"|t }}</a></li>
+        </ul>
+      </li>
+    {% endif %}
+      <li class="block-social__item"><a href="#" class="print-page">{{ "Print"|t }}</a>
+    </li>
+    {% if node %}
+      <li class="block-social__item"><a href="#">{{ "Subscribe"|t }}</a>
+    {% endif %}
+    </li>
+  </ul>
+</div>

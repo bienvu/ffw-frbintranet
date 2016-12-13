@@ -1,0 +1,18 @@
+{#
+/**
+* @file
+* Frederiksberg's theme implementation to display a node.
+*
+* @see template_preprocess_node()
+*/
+#}
+
+<div class="meta">
+  <div class="meta__item meta__link">{{content.field_tags}}</div>
+  <div class="meta__item meta__date">{{ created|date("d\. M Y") }}</div>
+</div>
+<h3 class="block-grid-content__title"><a href="{{ url }}">{{ label }}</a></h3>
+<div class="block-grid-content__content">
+  <a href = "{{ url }}">{{content.field_teaser}}</a>
+</div>
+

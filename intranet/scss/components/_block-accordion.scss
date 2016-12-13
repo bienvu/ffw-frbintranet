@@ -1,0 +1,145 @@
+.block-accordion {
+  padding-bottom: rem(40px);
+  padding-top: rem(25px);
+
+  &__title {
+    margin-bottom: rem(30px);
+  }
+
+  &__header {
+    @extend .icon-angle-down;
+    // @include fousandm;
+    @include opensans-bold;
+    background-color: $white;
+    border-radius: 0;
+    border: rem(1px) solid $gray-e6;
+    cursor: pointer;
+    display: block;
+    font-size: rem(15px);
+    margin-top: rem(-1px);
+    padding: rem(15px 65px 15px 25px);
+    position: relative;
+    transition: all 400ms ease 0s;
+
+    &:before {
+      @extend %icons;
+      font-size: rem(22px);
+      font-weight: 500;
+      line-height: 2.725;
+      position: absolute;
+      right: rem(30px);
+      top: 0;
+    }
+
+    &.active {
+      background-color: $white;
+    }
+
+    &:hover {
+      background-color: $green-e1;
+      color: $primary-color;
+    }
+  }
+
+  &__content {
+    @extend %clearfix;
+    height: 0;
+    opacity: 0;
+    overflow-y: hidden;
+
+    &.active {
+      background-color: $white;
+      display: block;
+      height: auto;
+      opacity: 1;
+      overflow-y: visible;
+      padding: rem(30px);
+      transition: opacity 500ms ease 0s;
+      width: 100%;
+    }
+
+    p {
+      margin-bottom: rem(20px);
+    }
+
+    // Style table member
+    table {
+      margin-bottom: 0 !important;
+      margin-top: 0;
+      width: 100% !important;
+
+      td {
+        font-size: rem(15px);
+        line-height: rem(26px);
+
+        @include susy-media(tablet) {
+          padding: rem(6px 30px 10px 0) !important;
+          width: calc(79% / 2) !important;
+
+          &:first-of-type {
+            width: 21% !important;
+            padding: rem(10px 20px 10px 0) !important;
+          }
+        }
+
+        p {
+          margin-bottom: 0;
+        }
+      }
+
+      a {
+        font-size: rem(15px);
+      }
+
+      tbody {
+        tr {
+          border-bottom: 0;
+
+          &:hover {
+            background-color: transparent;
+          }
+        }
+      }
+    }
+
+    .table-responsive {
+      margin-top: 0;
+
+      li {
+        @extend %clearfix;
+
+        @include susy-media(mobileLarge) {
+          > p {
+            float: left;
+            margin: 0 !important;
+            padding: rem(6px 20px 10px 0) !important;
+            width: calc(79% / 2) !important;
+
+            &:first-of-type {
+              width: 21% !important;
+              padding: rem(10px 20px 10px 0) !important;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &__close-button {
+    // @include fousandm;
+    @include opensans-semibold;
+    color: $primary-color;
+    cursor: pointer;
+    font-size: rem(12px);
+    margin-bottom: rem(5px);
+    padding-right: rem(35px);
+    text-align: right;
+    text-transform: uppercase;
+
+    i:before {
+      font-size: rem(14px);
+      font-weight: 600;
+      padding-left: rem(5px);
+    }
+  }
+}

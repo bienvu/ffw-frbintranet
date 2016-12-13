@@ -1,0 +1,56 @@
+{#
+/**
+ * @file
+ * Frederiksberg's theme implementation to contact display.
+ *
+ * @see template_preprocess_node()
+ */
+#}
+
+{% if contact is not empty %}
+  <div class="factbox bg--light-green">
+    <div class="block-text">
+      <h2>{{ 'Contact'|t}} </h2>
+      <h3><a href="{{contact.url}}">{{contact.contact_headline}}</a></h3>
+      {% if (contact.address_line1) %}
+        {{contact.address_line1}}
+        <br>
+      {% endif %}
+      {% if (contact.address_line2) %}
+        {{contact.address_line2}}
+        <br>
+      {% endif %}
+      {{contact.postal_code}} {{contact.city}}
+      <br>
+      {% if (contact.email) %}
+        <a class="underline" href="mailto:{{contact.email}}">{{contact.email}}</a>
+        <br>
+      {% endif %}
+      {% if contact.secure_mail is not empty %}
+        {% for item in contact.secure_mail %}
+          <a class="underline" title={{item.title}} href="{{item.url}}">{{item.title}}</a>
+          <br>
+        {% endfor %}
+      {% endif %}
+      {% if (contact.contact.contact_by_phone_header or contact.phone_hours) %}
+        <div class="margin-bottom-25">
+          <h4>{{contact.contact_by_phone_header}}</h4>
+          {% for item in contact.phone_hours %}
+            {{item.day}}. {{item.hour}}
+            <br>
+          {% endfor %}
+        </div>
+      {% endif %}
+      {% if (contact.contact.contact_personally_header or contact.personally_hours) %}
+        <div class="margin-bottom-25">
+          <h4>{{contact.contact_personally_header}}</h4>
+          {% for item in contact.personally_hours %}
+            {{item.day}}. {{item.hour}}
+            <br>
+          {% endfor %}
+        </div>
+      {% endif %}
+      <div class="margin-bottom-25"><b>{{'Telephone'|t}}:</b> {{contact.phone}}</div>
+    </div>
+  </div>
+{% endif %}

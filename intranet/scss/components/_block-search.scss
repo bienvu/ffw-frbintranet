@@ -1,0 +1,114 @@
+// Block search style.
+.block-intro {
+  margin-bottom: rem(10px);
+
+  @include susy-media(mobileLarge) {
+    display: table-cell;
+    margin-bottom: 0;
+    vertical-align: middle;
+    width: 40%;
+  }
+
+  &__title {
+    // @include fousandm;
+    @include opensans-semibold;
+    font-size: rem(19.6px);
+    font-weight: 500;
+    margin: 0;
+    padding-right: rem(10px);
+
+    @include susy-media(tablet) {
+      font-size: rem(23px);
+    }
+  }
+}
+
+.block-search {
+  width: 100%;
+
+  @include susy-media(mobileLarge) {
+    display: table-cell;
+    vertical-align: middle;
+    width: 60%;
+  }
+
+  form {
+    position: relative;
+
+    .form-item {
+      display: block;
+      margin: 0;
+      width: 100%;
+    }
+  }
+
+  .form-search {
+    // @include fousanmd;
+    @include opensans-semibold;
+    -moz-border-radius: rem(10px);
+    -webkit-border-radius: rem(10px);
+    background-color: $green-f7;
+    border-radius: rem(10px);
+    border: rem(1px) solid $gray-cc;
+    box-shadow: rem(0 0 10px 0) rgba(0, 0, 0, .25) inset;
+    box-sizing: border-box;
+    color: $gray-00;
+    font-size: rem(15px);
+    height: auto;
+    line-height: 1.42857;
+    margin: 0;
+    min-width: rem(256px);
+    padding: rem(15px 50px 15px 15px);
+    width: 100%;
+
+    @include susy-media(tablet) {
+      font-size: rem(18px);
+      padding: rem(15px 60px 15px 28px);
+    }
+
+    &:focus {
+      border-color: $blue-38;
+      outline: 0 none;
+    }
+
+    &::-webkit-input-placeholder {
+      color: $gray-99;
+      opacity: 1;
+    }
+
+    &::-moz-placeholder {
+      color: $gray-99;
+      opacity: 1;
+    }
+
+    &:-ms-input-placeholder {
+      color: $gray-99;
+      opacity: 1;
+    }
+
+    &:-moz-placeholder {
+      color: $gray-99;
+      opacity: 1;
+    }
+  }
+
+  .form-wrapper {
+    bottom: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    .button {
+      background: none;
+      color: $text-color;
+      font-size: rem(20px);
+      margin-bottom: 0;
+      min-width: inherit;
+      padding: rem(10px 21px);
+
+      @include susy-media(tablet) {
+        font-size: rem(25px);
+      }
+    }
+  }
+}

@@ -1,0 +1,54 @@
+.block-404 {
+  background-color: $green-01;
+  bottom: 0;
+  height: 100%;
+  left: 0;
+  position: relative;
+  right: 0;
+  top: 0;
+
+  @include susy-media(tablet) {
+    min-height: rem(807px);
+  }
+
+  &:before {
+    background-attachment: scroll;
+    background-image: linear-gradient(125deg, rgba(1, 66, 38, .9), rgba(0, 80, 45, .95)), url('../images/bird.svg');
+    background-position: 100% 100%;
+    background-repeat: repeat-x;
+    background-size: auto auto, rem(100px) auto;
+    bottom: 0;
+    content: '';
+    height: 100%;
+    left: 0;
+    opacity: .8;
+    position: absolute;
+    right: 0;
+    width: 100%;
+  }
+
+  &__wrap {
+    display: table;
+    height: 100%;
+    padding: rem(25px);
+    text-align: center;
+    width: 100%;
+
+    @include susy-media(tablet) {
+      padding: rem(130px);
+    }
+  }
+
+  &__inner {
+    color: $white;
+    display: table-cell;
+    position: relative;
+    text-align: center;
+    vertical-align: middle;
+  }
+}
+
+:-ms-input-placeholder,
+:root .block-404:before {
+  background-size: auto auto, rem(90px) rem(137px);
+}

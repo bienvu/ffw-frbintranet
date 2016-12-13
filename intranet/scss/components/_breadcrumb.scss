@@ -1,0 +1,42 @@
+.breadcrumb {
+  margin-bottom: rem(18px);
+
+  ol {
+    @extend %clearfix;
+    list-style: none;
+  }
+
+  li {
+    @extend .icon-arrow-right;
+    // @include fousandm;
+    @include opensans-semibold;
+    float: left;
+    font-size: rem(13.5px);
+    padding-bottom: rem(2px);
+    padding-right: rem(33px);
+    position: relative;
+
+    &:before {
+      @extend %icons;
+      color: $primary-color;
+      font-size: rem(12px);
+      line-height: 1.3;
+      position: absolute;
+      right: rem(12px);
+      top: rem(3px);
+    }
+
+    &:last-of-type {
+      padding-right: 0;
+
+      &:before {
+        content: none;
+      }
+    }
+
+    a {
+      cursor: pointer;
+      text-decoration: none;
+    }
+  }
+}

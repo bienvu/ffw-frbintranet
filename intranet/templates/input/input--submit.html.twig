@@ -1,0 +1,17 @@
+{#
+/**
+ * @file
+ * Theme override for an 'input' #type form element.
+ *
+ * Available variables:
+ * - attributes: A list of HTML attributes for the input element.
+ * - children: Optional additional rendered elements.
+ *
+ * @see template_preprocess_input()
+ */
+#}
+{% if (attributes.value == 'Search' or attributes.value == 'Søg') %}
+  <button{{ attributes }} ><i class="icon-search"></i></button>
+{% else %}
+  <input{{ attributes }} />{{ children }}
+{% endif %}

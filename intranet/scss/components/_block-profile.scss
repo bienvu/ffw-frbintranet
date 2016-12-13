@@ -1,0 +1,42 @@
+.block-profile {
+  @extend %clearfix;
+
+  &__image {
+    line-height: 0;
+    padding-bottom: rem(10px);
+    padding-top: rem(10px);
+
+    @include susy-media(mobileLarge) {
+      float: left;
+      width: 16%;
+    }
+  }
+
+  &__info {
+    @extend %clearfix;
+    font-size: rem(16px);
+    line-height: rem(26px);
+    padding-top: rem(6px);
+
+    @include susy-media(mobileLarge) {
+      float: left;
+      padding-left: rem(20px);
+      width: 84%;
+    }
+
+    &__item {
+      padding-bottom: rem(20px);
+      padding-right: rem(30px);
+
+      @include susy-media(mobileLarge) {
+        float: left;
+        padding-bottom: rem(20px);
+        width: 50%;
+      }
+
+      p {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

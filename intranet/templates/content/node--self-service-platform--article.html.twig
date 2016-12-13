@@ -1,0 +1,14 @@
+{#
+/**
+ * @file
+ * Frederiksberg's theme implementation to contact display.
+ *
+ * @see template_preprocess_node()
+ */
+#}
+
+{% if self_url is defined %}
+  <div class="factbox factbox--small factbox--white">
+    <a class="btn btn--bg-red btn--large" href="{{ self_url }}" target="_blank" title="{{ self_title }}">{{ self_title }}</a>
+  </div>
+{% endif %}

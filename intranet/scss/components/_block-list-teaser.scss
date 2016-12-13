@@ -1,0 +1,62 @@
+.meta {
+  @extend %clearfix;
+  font-size: rem(14px);
+  margin-bottom: rem(20px);
+
+  &__date,
+  &__link {
+    float: left;
+  }
+
+  &__item {
+    &:first-of-type {
+      padding-right: rem(3px);
+    }
+  }
+
+  &__date {
+    // @include fousanmd;
+    @include opensans-semibold;
+    color: $gray-92;
+  }
+
+  &__link {
+    // @include fousandm;
+    @include opensans-semibold;
+    text-transform: uppercase;
+  }
+}
+
+.block-list-teaser {
+  padding-bottom: rem(55px);
+  padding-top: rem(11px);
+
+  &__item {
+    border-bottom: rem(1px) solid $gray;
+    margin-bottom: rem(39px);
+    padding-bottom: rem(16px);
+  }
+
+  &__title {
+    margin-bottom: rem(9px);
+  }
+
+  &__image {
+    line-height: 0;
+
+    .block-media {
+      margin-bottom: 0;
+    }
+  }
+
+  &__body {
+    a {
+      color: $gray;
+
+      &:hover {
+        color: $primary-color-hover;
+        cursor: pointer;
+      }
+    }
+  }
+}

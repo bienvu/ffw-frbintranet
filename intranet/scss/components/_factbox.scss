@@ -1,0 +1,63 @@
+.factbox {
+  margin-bottom: rem(40px);
+  padding: rem(20px);
+
+  @include susy-media(tablet) {
+    padding: rem(30px 50px 35px);
+  }
+
+  &--small {
+    @include susy-media(tablet) {
+      padding: rem(20px 50px);
+    }
+  }
+
+  &--white {
+    background-color: $white;
+    margin-bottom: rem(2px);
+  }
+
+  &--light-green {
+    @extend %bg--light-green;
+  }
+
+  .btn {
+    margin-bottom: 0;
+  }
+
+  p {
+    margin-bottom: rem(10px);
+  }
+
+  .field--name-field-vacancy-facts {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      margin-bottom: 0;
+    }
+
+    h3,
+    h4 {
+      font-size: rem(18px);
+    }
+
+    p {
+      margin-bottom: rem(18px);
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+.content-sidebar {
+  &__sidebar {
+    .factbox {
+      margin-bottom: rem(20px);
+    }
+  }
+}

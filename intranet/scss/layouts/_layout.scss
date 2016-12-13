@@ -1,0 +1,192 @@
+// LAYOUT
+// This is the main layout file.
+// This file should be used to define the primary page layout that each of the page types will be extending.
+// This includes global styles for html, body, etc.
+
+@viewport{
+  width: extend-to-zoom;
+  zoom: 1;
+}
+
+//Enable font-smoothing
+html {
+  // @include fousanno;
+  @include opensans;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  color: $text-color;
+  font-size: $base-font-size; // Don't modify static unit.
+  font-smoothing: antialiased;
+  line-height: $base-line-height;
+}
+
+body {
+  // Disable in production mode;
+  // @include show-breakpoints;
+  background-color: $gray-f5;
+  font-size: rem(17px);
+  line-height: 1.7;
+  text-size-adjust: none;
+}
+
+.main {
+  background-color: $gray-f5;
+  border-bottom: rem(20px) solid $green-00;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+
+  @include susy-media(tablet) {
+    margin-bottom: rem(500px);
+    min-height: rem(400px);
+  }
+}
+
+.page-404 {
+  .main {
+    border-bottom: 0;
+    padding-top: rem(79px);
+
+    @include susy-media(tablet) {
+      margin-bottom: 0;
+      min-height: auto;
+    }
+  }
+}
+
+.page-full {
+  .block-system-main-block > .content-sidebar {
+    padding: 0;
+
+    > .container {
+      max-width: inherit;
+
+      .container {
+        padding: 0 rem(15px);
+
+        @include susy-media(tablet) {
+          padding: 0 rem(30px);
+        }
+
+        @include susy-media(desktop-wide) {
+          padding: 0;
+        }
+      }
+    }
+  }
+
+  .container {
+    margin: 0 auto;
+  }
+}
+
+.path-user .region-content {
+  @extend .container;
+  padding: rem(40px 0);
+
+  @include susy-media(desktop-wide) {
+    padding: rem(40px 30px);
+  }
+
+  .tabs.primary {
+    padding: 0;
+  }
+}
+
+.content-sidebar {
+  @extend %clearfix;
+  padding: rem(40px 0 20px);
+
+  > .container > .content-sidebar__content {
+    .content-sidebar__content {
+      @include susy-media(desktop-wide) {
+        padding: 0 rem(30px);
+      }
+    }
+  }
+}
+
+.has-sidebar {
+  .content-sidebar {
+    &__content {
+      @include susy-media(tablet-large) {
+        float: left;
+        padding-right: rem(40px);
+        width: 66.66%;
+      }
+
+      @include susy-media(desktop) {
+        padding-right: rem(80px);
+      }
+
+      @include susy-media(desktop-wide) {
+        padding-left: rem(30px);
+      }
+    }
+
+    &__sidebar {
+      @include susy-media(tablet-large) {
+        float: left;
+        width: 33.33%;
+      }
+
+      @include susy-media(desktop-wide) {
+        padding-right: rem(30px);
+      }
+    }
+  }
+}
+
+.panel-col-top {
+  @extend %box-shadow;
+  @extend %clearfix;
+  background: $white;
+  position: relative;
+}
+
+.panel-col-middle {
+  @extend %clearfix;
+  background: $green-f7;
+}
+
+.panel-col-bottom {
+  @extend %clearfix;
+  background: $gray-fc;
+}
+
+// Overide style ipe block
+.ipe-form {
+  max-width: rem(1140px);
+
+  input[type='submit'],
+  button {
+    // @include fousanmd;
+    @include opensans-semibold;
+    border-radius: rem(100px);
+    border: 0;
+    cursor: pointer;
+    display: inline-block;
+    font-size: rem(14px);
+    font-weight: 400;
+    line-height: 1.66;
+    margin: rem(0 0 12px 0);
+    outline: none;
+    padding: rem(8px 15px 10px);
+    text-align: center;
+    transition: .4s;
+
+    &,
+    &:focus,
+    &:visited {
+      background-color: $primary-color;// Custom default style of browser button tag
+      color: $white;
+    }
+
+    &:active,
+    &:hover {
+      background-color: $primary-color-hover;
+      transition: .5s;
+      color: $white;
+    }
+  }
+}

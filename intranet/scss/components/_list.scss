@@ -1,0 +1,151 @@
+// List style
+%list,
+.list {
+  &,
+  &--inline,
+  &--small,
+  &--tiny,
+  &--icon {
+    // @include fousandm;
+    @include opensans-bold;
+    margin: 0;
+
+    li {
+      margin-bottom: rem(15px);
+      line-height: rem(22px);
+
+      a {
+        display: block;
+      }
+    }
+  }
+
+  &--inline {
+    @extend %clearfix;
+    margin-bottom: rem(20px);
+
+    li {
+      float: left;
+      margin-right: rem(15px);
+    }
+  }
+
+  &--small {
+    li {
+      font-size: rem(16px);
+    }
+
+    .list--tiny {
+      @extend %list--tiny;
+    }
+  }
+
+  &--tiny {
+    li {
+      font-size: rem(12px);
+      text-transform: uppercase;
+    }
+
+    .list--small {
+      @extend %list--small;
+    }
+  }
+
+  &--icon {
+    > li {
+      &.active {
+        border-bottom: 2px solid $green-64;
+        border-top: 2px solid $green-64;
+
+        > a {
+          color: $green-64;
+          margin-bottom: rem(11px 0 10px);
+          padding: rem(10px 0 11px 15px);
+
+          &:before {
+            @extend .icon-arrow-down:before;
+          }
+        }
+      }
+    }
+
+    li {
+      margin-bottom: rem(11px);
+
+      a {
+        padding-left: rem(11px);
+
+        &:before {
+          @extend %icons;
+          @extend .icon-arrow-right:before;
+          font-size: rem(14px);
+          margin-right: rem(8px);
+        }
+      }
+
+      &.active {
+        > a {
+          color: $green-64;
+        }
+
+        > ul {
+          padding-left: rem(30px);
+
+          ul {
+            padding-left: rem(5px);
+          }
+        }
+
+        ul {
+          li {
+            margin-bottom: rem(15px);
+
+            &:last-of-type {
+              margin-bottom: rem(20px);
+            }
+
+            a {
+              padding-left: 0;
+
+              &:before {
+                content: '';
+              }
+            }
+
+            &.active {
+              a {
+                padding-left: rem(10px);
+
+                &:before {
+                  @extend .icon-arrow-right:before;
+                }
+              }
+            }
+          }
+
+          &.list--icon {
+            @extend %list--icon;
+          }
+        }
+      }
+    }
+  }
+
+  li {
+    font-size: rem(16px);
+
+    .list--tiny {
+      @extend %list--tiny;
+    }
+
+    .list--small {
+      @extend %list--small;
+    }
+  }
+}
+
+ul.tabs {
+  max-width: rem(1400px);
+  margin: 0 auto;
+  padding: rem(10px 30px 0 30px);
+}

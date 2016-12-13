@@ -1,0 +1,108 @@
+.hero-banner {
+  height: rem(400px);
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+
+  @include susy-media(tablet) {
+    height: rem(600px);
+  }
+
+  &:before {
+    background-color: $black;
+    content: '';
+    height: 100%;
+    left: 0;
+    opacity: .25;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+  }
+
+  &__image {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -2;
+
+    img {
+      height: 100%;
+      left: 50%;
+      position: absolute;
+      top: 50%;
+      transform: translateX(-50%) translateY(-50%);
+      width: auto;
+
+      @include susy-media(mobileLarge) {
+        height: auto;
+        width: 100%;
+      }
+
+      @include susy-media(tablet) {
+        height: 105%;
+        width: auto;
+      }
+
+      @include susy-media(tablet-large) {
+        height: auto;
+        width: 100%;
+      }
+    }
+  }
+
+  &__content {
+    color: $white;
+    display: table;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: rem(1400px);
+    padding-left: rem(20px);
+    padding-right: rem(20px);
+    text-align: center;
+    width: 100%;
+    z-index: 3;
+
+    @include susy-media(mobileLandscape) {
+      padding: rem(0 40px);
+    }
+  }
+
+  &__inner {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+  }
+
+  &__title {
+    // @include fousandm;
+    @include opensans-bold;
+    font-size: rem(23px);
+    line-height: rem(30px);
+    margin-bottom: rem(32px);
+
+    @include susy-media(mobileLandscape) {
+      font-size: rem(27px);
+      line-height: rem(36px);
+    }
+
+    @include susy-media(tablet) {
+      font-size: rem(39px);
+      line-height: rem(50px);
+    }
+  }
+
+  &__link {
+    a {
+      width: 100%;
+      margin-bottom: 0;
+
+      @include susy-media(tablet) {
+        width: auto;
+      }
+    }
+  }
+}

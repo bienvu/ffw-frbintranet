@@ -1,0 +1,132 @@
+// Tipso Bubble Styles
+.tipso_bubble,
+.tipso_bubble > .tipso_arrow {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.tooltip {
+  cursor: help;
+  display: inline-block;
+
+  i {
+    color: $green-64;
+    font-size: rem(18px);
+    padding: rem(5px 10px);
+  }
+
+  &--small {
+    i {
+      font-size: rem(16px);
+    }
+  }
+}
+
+.tipso_title {
+  border-radius: rem(6px 6px 0 0);
+}
+
+.tipso_content {
+  line-height: rem(21px);
+  padding: rem(15px);
+  word-wrap: break-word;
+
+  @include susy-media(mobileLandscape) {
+    padding: rem(20px);
+  }
+
+  &:before {
+    @extend %icons;
+    color: $green-64;
+    content: '\e90c';
+    padding: rem(5px);
+  }
+
+  p {
+    margin-bottom: 0;
+    display: inline;
+  }
+}
+
+.tipso_bubble {
+  border-radius: rem(5px);
+  font-size: rem(15px);
+  line-height: rem(21px);
+  position: absolute;
+  text-align: left;
+  z-index: 8;
+
+  &.tiny {
+    font-size: .6rem;
+  }
+
+  &.small {
+    font-size: .8rem;
+  }
+
+  &.default {
+    font-size: 1rem;
+  }
+
+  &.large {
+    font-size: 1.2rem;
+    width: 100%;
+  }
+
+  > .tipso_arrow {
+    border: rem(8px) solid;
+    height: 0;
+    pointer-events: none;
+    position: absolute;
+    width: 0;
+  }
+
+  &.top {
+    > .tipso_arrow {
+      border-bottom-color: transparent;
+      border-left-color: transparent;
+      border-right-color: transparent;
+      border-top-color: $black;
+      left: 50%;
+      margin-left: rem(-8px);
+      top: 100%;
+    }
+  }
+
+  &.bottom {
+    > .tipso_arrow {
+      border-bottom-color: $black;
+      border-left-color: transparent;
+      border-right-color: transparent;
+      border-top-color: transparent;
+      bottom: 100%;
+      left: 50%;
+      margin-left: rem(-8px);
+    }
+  }
+
+  &.left {
+    > .tipso_arrow {
+      border-bottom-color: transparent;
+      border-left-color: $black;
+      border-right-color: transparent;
+      border-top-color: transparent;
+      left: 100%;
+      margin-top: rem(-8px);
+      top: 50%;
+    }
+  }
+
+  &.right {
+    > .tipso_arrow {
+      border-bottom-color: transparent;
+      border-left-color: transparent;
+      border-right-color: $black;
+      border-top-color: transparent;
+      margin-top: rem(-8px);
+      right: 100%;
+      top: 50%;
+    }
+  }
+}

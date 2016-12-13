@@ -1,0 +1,32 @@
+{% block Pager %}
+  <div class="container">
+    <nav aria-labelledby="pagination-heading" role="navigation" class="pager">
+      <ul class="pager__items js-pager__items">
+        <li class="pager__item pager__item--first">
+          <a title="Go to first page" href="?page=0">
+            <span aria-hidden="true">« First</span>
+          </a>
+        </li>
+        <li class="pager__item pager__item--previous">
+          <a rel="prev" title="Go to previous page" href="?page=0">
+            <span aria-hidden="true">Forrige</span>
+          </a>
+        </li>
+        <li class="pager__item is-active"><a title="Current page" href="?page=0">1</a></li>
+        <li class="pager__item"><a title="Go to page 2" href="?page=1">2</a></li>
+        <li class="pager__item"><a title="Go to page 3" href="?page=2">3</a></li>
+        <li role="presentation" class="pager__item pager__item--ellipsis">…</li>
+        <li class="pager__item pager__item--next">
+          <a rel="next" title="Go to next page" href="?page=1">
+            <span aria-hidden="true">Næste</span>
+          </a>
+        </li>
+        <li class="pager__item pager__item--last">
+          <a title="Go to last page" href="?page=6">
+            <span aria-hidden="true">Last »</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+{% endblock %}

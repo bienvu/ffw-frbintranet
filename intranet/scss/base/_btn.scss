@@ -1,0 +1,69 @@
+// Button
+.btn {
+  // @include fousanmd;
+  @include opensans-semibold;
+  border-radius: rem(100px);
+  border: 0;
+  cursor: pointer;
+  display: inline-block;
+  font-size: rem(13.5px);
+  font-weight: 400;
+  line-height: 1.66;
+  margin: rem(0 0 12px 0);
+  outline: none;
+  padding: rem(10px 15px);
+  text-align: center;
+  transition: .4s;
+
+  &,
+  &:focus,
+  &:visited {
+    background-color: $primary-color;// Custom default style of browser button tag
+    color: $white;
+  }
+
+  &:active,
+  &:hover {
+    background-color: $primary-color-hover;
+    transition: .5s;
+    color: $white;
+  }
+
+  &--bg-red {
+    &,
+    &:focus,
+    &:visited {
+      background-color: $red;
+    }
+
+    &:active,
+    &:hover {
+      background-color: $red-ce;
+    }
+  }
+
+  &--bg-gray {
+    &,
+    &:focus,
+    &:visited {
+      background-color: $gray-e6;
+      color: $green;
+    }
+
+    &:active,
+    &:hover {
+      background-color: $green-51;
+      color: $white;
+    }
+  }
+
+  &--bold {
+    font-weight: 700;
+    margin-top: rem(12px);
+  }
+
+  &--large {
+    font-size: rem(15px);
+    padding: rem(13px 24px 15px);
+  }
+}

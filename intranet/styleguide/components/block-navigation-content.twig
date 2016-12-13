@@ -1,0 +1,47 @@
+{% set navigation_content = [
+    {
+      'navigation_content_title' : 'Affald og genbrug',
+      'navigation_content_text' : 'Dagrenovation er typisk det affald fra husholdningen, der er tilbage når du har frasorteret blandt andet papir, pap, glas og farligt affald.'
+    },
+    {
+      'navigation_content_title' : 'Brændeovn',
+      'navigation_content_text' : 'Ja tak til aviser, reklamer, ugeblade, brevpapir og telefonbøger. Nej tak til pap og karton, vådt og snavset papir, æggebakker og pizzabakker.'
+    },
+    {
+      'navigation_content_title' : 'Drikkevand',
+      'navigation_content_text' : 'Du kan aflevere rent og tørt pap og karton til genbrug. Det er .'
+    },
+    {
+      'navigation_content_title' : 'Jord',
+      'navigation_content_text' : 'Grønt køkkenaffald er rester fra frugt og grøntsager. Det kan du sortere fra det andet affald'
+    },
+    {
+      'navigation_content_title' : 'Klimatilpasning',
+      'navigation_content_text' : 'Affald der er farligt for miljøet, skal du aflevere på en genbrugsplads eller i en forretning, som tager imod det.'
+    },
+    {
+      'navigation_content_title' : 'Luft',
+      'navigation_content_text' : 'Storskrald er typisk ting, som er for store til at komme i den almindelige skraldespand. Det er fx møbler, cykler, pap, plast eller elektronik m.v.'
+    },
+    {
+      'navigation_content_title' : 'Støj',
+      'navigation_content_text' : 'Læs om grundvand og drikkevand, forurenet jord, Miljøpuljen, badevand og naturbeskyttelse.'
+    },
+  ]
+%}
+
+{% block blockNavigationContent %}
+  <div class="container">
+    <div class="block-navigation-content">
+      <div class="block-navigation-content__list">
+        {% for item in navigation_content %}
+          <div class="block-navigation-content__item">
+            <h3 class="block-navigation-content__title"><a href="#">{{ item.navigation_content_title }}</a></h3>
+            <div class="block-navigation-content__content"><p><a href="#">{{ item.navigation_content_text }}</a></p></div>
+            <div class="block-navigation-content__link"><a class="btn btn--bg-gray" href="#">Se mere</a></div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+{% endblock %}

@@ -1,0 +1,53 @@
+{% set navigation = [
+    {
+      'navigation_icon' : '../images/icon-light.svg',
+      'navigation_title' : 'Trafik og parkering'
+    },
+    {
+      'navigation_icon' : '../images/icon-bin.svg',
+      'navigation_title' : 'Affald og miljø'
+    },
+    {
+      'navigation_icon' : '../images/icon-kite.svg',
+      'navigation_title' : 'Pasning og skole'
+    },
+    {
+      'navigation_icon' : '../images/icon-bin.svg',
+      'navigation_title' : 'Personlige forhold'
+    },
+    {
+      'navigation_icon' : '../images/icon-kite.svg',
+      'navigation_title' : 'Uddannelse'
+    },
+    {
+      'navigation_icon' : '../images/icon-light.svg',
+      'navigation_title' : 'Bolig'
+    }
+  ]
+%}
+
+{% block blockNavigation %}
+  <div class="container">
+    <div class="block-navigation">
+      <div class="block-navigation__list">
+        {% for item in navigation %}
+          <div class="block-navigation__item">
+            <div class="block-navigation__icon"><a href="#"><img src="{{ item.navigation_icon }}"></a></div>
+            <div class="block-navigation__content">
+              <h3 class="block-navigation__title"><a href="#">{{ item.navigation_title }}</a></h3>
+                <ul class="list">
+                  <li><a href="#">Nye regler for kontanthjælp</a>
+                  </li>
+                  <li><a href="#">UngeGuiden</a>
+                  </li>
+                  <li><a href="#">Jobcenter </a>
+                  </li>
+                </ul>
+              <div class="block-navigation__button hidden-on-mobile"><a class="btn btn--bg-gray" href="#">Se alle</a></div>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+{% endblock %}

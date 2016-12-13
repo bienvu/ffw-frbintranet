@@ -1,0 +1,34 @@
+{% set media_image = 'https://unsplash.it/822/400/?random' %}
+<div class="container"><h4>Media image</h4></div>
+{% block blockMedia %}
+  <div class="container">
+    <div class="block-media">
+      {% if media_image is not empty%}
+        <div class="block-media__image"><a href="#"><img src="{{ media_image }}"></a></div>
+      {% endif %}
+      {% if media_video is not empty%}
+        <div class="block-media__video"><a href="#"><img src="{{ media_video }}"></a></div>
+      {% endif %}
+      <div class="block-media__title"><label style="display: inline;">Foto:</label>Marcus Hansen</div>
+      <div class="block-media__description">Her kan du se dem i den rækkefølge, som de er blevet valgt. Medlemmer af Magistraten (Økonomiudvalget) kaldes rådmænd.</div>
+    </div>
+  </div>
+{% endblock %}
+
+{% set media_image = '' %}
+{% set media_video = 'https://unsplash.it/822/400/?random' %}
+<div class="container"><h4>Media video</h4></div>
+{% block blockMedia %}
+  <div class="container">
+    <div class="block-media">
+      {% if media_image is not empty%}
+        <div class="block-media__image"><a href="#"><img src="{{ media_image }}"></a></div>
+      {% endif %}
+      {% if media_video is not empty%}
+        <div class="block-media__video"><a href="#"><img src="{{ media_video }}"></a></div>
+      {% endif %}
+      <div class="block-media__title"><label style="display: inline;">Foto:</label>Marcus Hansen</div>
+      <div class="block-media__description">Her kan du se dem i den rækkefølge, som de er blevet valgt. Medlemmer af Magistraten (Økonomiudvalget) kaldes rådmænd.</div>
+    </div>
+  </div>
+{% endblock %}
