@@ -40,7 +40,7 @@
 .block-social-link {
   float: left;
   line-height: 1;
-  padding: rem(32px 10px 20px);
+  padding: rem(15px);
 
   @include susy-media(mobileDesktopSmallOnly) {
     border-bottom: rem(1px) solid $green-f7;

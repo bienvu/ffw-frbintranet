@@ -45,22 +45,16 @@
 <div class="page">
   {% if page.header %}
     <header class="header">
-      <div class="header__top">
-        <div class="header__top__wrap">
-          <div class="header__top__left">
+      <div class="header__sticky">
+        <div class="header__wrap">
+          <div class="header__left">
             {{ page.header_right }}
           </div>
-          <div class="header__top__right">
+          <div class="header__right">
             <div class="menu-icon js-open"><i class="icon-menu"></i></div>
             {{ page.header }}
           </div>
         </div>
-      </div>
-      <div class="header__bottom">
-        <div class="header__bottom__wrap">
-          {{ page.header_bottom }}
-        </div>
-        <div class="bg-image"></div>
       </div>
     </header>
   {% endif %}

@@ -2,11 +2,8 @@
 .menu-icon {
   float: left;
   font-size: rem(35px);
-  padding: rem(8px 15px);
-
-  @include susy-media(tablet) {
-    padding: rem(18px 20px 8px);
-  }
+  line-height: 1;
+  padding: rem(7px 10px);
 
   @include susy-media(desktop-small) {
     display: none;
@@ -14,16 +11,12 @@
 
   i {
     cursor: pointer;
-    line-height: 1.5;
+    line-height: 1;
   }
 }
 
 
 .main-menu {
-  @include susy-media(mobileDesktopSmallOnly) {
-    background: $green-f7;
-  }
-
   .menu-icon {
     font-size: rem(20px);
     padding: rem(15px 40px);
@@ -35,6 +28,7 @@
       color: $white;
       display: block;
       height: rem(45px);
+      line-height: 1.5;
       padding: rem(9px 0);
       text-align: center;
       width: rem(45px);
@@ -52,33 +46,36 @@
     }
 
     a {
-      // @include fousandm;
-      @include opensans-bold;
+      @include opensans;
       color: $primary-color;
+      font-weight: 700;
       display: inline-block;
       font-size: rem(14.5px);
-      height: rem(80px);
-      letter-spacing: rem(.5px);
-      padding: rem(32px 20px 26px);
+      letter-spacing: rem(-.5px);
+      padding: rem(13px 15px);
       text-transform: uppercase;
       transition: .35;
 
       @include susy-media(mobileDesktopSmallOnly) {
         background: none;
         display: block;
-        height: auto;
         font-size: rem(15px);
-        padding: rem(18px 40px 19px);
         letter-spacing: rem(.9px);
+        padding: rem(17px 40px 18px);
       }
 
       &:hover {
-        color: $primary-color-hover;
+        color: $white;
+
+        @include susy-media(mobileDesktopSmallOnly) {
+          color: $green-da;
+        }
       }
 
       &.is-active {
         @include susy-media(mobileDesktopSmallOnly) {
-          color: $primary-color-hover;
+          color: $green-da;
+          background-color: $primary-color;
         }
 
         @include susy-media(desktop-small) {
