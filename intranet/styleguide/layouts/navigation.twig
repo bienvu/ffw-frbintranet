@@ -1,7 +1,8 @@
 {% block navigation %}
-  <div class="header__top">
-    <div class="container">
-      <div class="header__top__left">
+<div class="header">
+  <div class="header__sticky">
+    <div class="header__wrap">
+      <div class="header__left">
         <div class="region region-header-left">
           <div class="block-branding contextual-region block block-system block-system-branding-block" id="block-fk-theme-branding">
               <a class="site-logo" rel="home" title="Home" href="/">
@@ -10,44 +11,48 @@
           </div>
         </div>
       </div>
-      <div class="header__top__right">
+      <div class="header__right">
         <div class="menu-icon js-open"><i class="icon-menu"></i></div>
         <div class="region region-header">
           <nav class="contextual-region block block-menu navigation menu--main" id="block-fk-theme-main-menu" aria-labelledby="block-fk-theme-main-menu-menu" role="navigation">
             <ul class="main-menu">
               <li class="menu-icon js-close"><i class="icon-close"></i></li>
+              <li><a href="#" class="is-active"><i class="icon-home"></i></a></li>
               <li>
-                  <a data-drupal-link-system-path="&lt;front&gt;" href="/" class="is-active">Borger</a>
+                  <a data-drupal-link-system-path="&lt;front&gt;" href="/">Organisation</a>
               </li>
               <li>
-                  <a href="/google.com">Erhverv</a>
+                  <a href="/google.com">Ansat</a>
               </li>
               <li>
-                  <a href="/google.com">By og kultur</a>
+                  <a href="/google.com">Værktøjer</a>
               </li>
               <li>
-                  <a href="/google.com">Politik og demokrati</a>
+                  <a href="/google.com">Projekter</a>
               </li>
               <li>
-                  <a href="/google.com">Om kommunen</a>
+                  <a href="/google.com">Bagsiden</a>
               </li>
             </ul>
           </nav>
-          <div class="block-language">
-            <ul>
-              <li class="en"><a href="#">English</a></li>
-            </ul>
+          <div class="block-search-link">
+            <div class="clearfix field field--name-body">
+              <div class="box-search"><a href="#"><i class="icon-search"></i>Find Kollega</a></div>
+            </div>
           </div>
           <div class="block-search-link">
             <div class="clearfix field field--name-body">
-              <div class="box-search"><a href="#"><i class="icon-search"></i>SØg</a></div>
+              <div class="box-search"><a href="#"><i class="icon-search"></i> Søg</a></div>
             </div>
           </div>
-          <div class="block-social-link">
-            <a href="/facebook.com"><i class="icon-facebook"></i></a>
+          <div class="block-language">
+            <ul>
+              <li class="en"><a href="#">Min side</a></li>
+            </ul>
           </div>
         </div>
       </div>
     </div>
+  </div>
 </div>
 {% endblock %}

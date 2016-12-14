@@ -55,7 +55,7 @@
   var showHiddenFunction = function (btn, btnClose ,flag) {
     var $btn = btn,
         $btnClose = btnClose,
-        $parent = $btn.parents('.header__top__right');
+        $parent = $btn.parents('.header__right');
     $(document).on('click', function (e) {
       if ($parent.has(e.target).length === 0 && $parent.hasClass(flag)) {
         $parent.removeClass(flag);

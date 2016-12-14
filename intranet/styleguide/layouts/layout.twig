@@ -15,8 +15,11 @@
       {% include 'navigation.twig' %}
       <h1>{% block title %}{% endblock %}</h1>
     {% endblock %}
-    {% block content %}{% endblock %}
+    <main class="main">
+      {% block content %}{% endblock %}
+      </main>
     {% block footer %}
+      {% include 'footer.twig' %}
     {% endblock %}
     {% block footer_scripts %}
       <script src="js/lib/media.match.min.js"></script>

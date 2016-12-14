@@ -1,5 +1,5 @@
 %icons {
-  font-family: 'frederiksberg';
+  font-family: 'intranet';
   speak: none;
   font-style: normal;
   font-weight: normal;
@@ -17,48 +17,76 @@
   }
 }
 
-.icon-check:before {
-  content: '\e910';
-}
-
-.icon-control-play:before {
-  content: '\e90f';
-}
-
-.icon-play:before {
-  content: '\e90e';
-}
-
-.icon-calendar:before {
+.icon-home:before {
   content: '\e90b';
 }
 
-.icon-arrow-down:before {
-  content: '\e90d';
+.icon-search:before {
+  content: '\e90e';
 }
 
-.icon-close:before {
+.icon-bubble:before {
+  content: '\e909';
+}
+
+.icon-calendar:before {
   content: '\e90a';
 }
 
-.icon-kite:before {
-  content: '\e907';
+.icon-groups:before {
+  content: '\e90c';
 }
 
-.icon-bin:before {
+.icon-market:before {
+  content: '\e90d';
+}
+
+.icon-monitor:before {
+  content: '\e90f';
+}
+
+.icon-arrow-up:before {
   content: '\e908';
 }
 
-.icon-light:before {
-  content: '\e909';
+.icon-arrow-down:before {
+  content: '\e907';
+}
+
+.icon-user:before {
+  content: '\e914';
+}
+
+.icon-phone:before {
+  content: '\e915';
+}
+
+.icon-envelope:before {
+  content: '\e916';
+}
+
+.icon-check:before {
+  content: '\e917';
+}
+
+.icon-info_outline:before {
+  content: '\e918';
+}
+
+.icon-control-play:before {
+  content: '\e91a';
+}
+
+.icon-play:before {
+  content: '\e91b';
+}
+
+.icon-close:before {
+  content: '\e911';
 }
 
 .icon-menu:before {
   content: '\e906';
-}
-
-.icon-search:before {
-  content: '\e905';
 }
 
 .icon-facebook:before {
@@ -79,8 +107,4 @@
 
 .icon-arrow-right:before {
   content: '\e902';
-}
-
-.icon-info_outline:before {
-  content: '\e90c';
 }
