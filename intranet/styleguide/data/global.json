@@ -18,6 +18,9 @@
   ],
   "list_components":[
     {
+      "name":"block-hero",
+      "group":"component"
+    },{
       "name":"headings",
       "group":"basic",
       "hidecode":true
@@ -102,11 +105,6 @@
     {
       "id":"FK-111",
       "name":"block-navigation-content",
-      "group":"component"
-    },
-    {
-      "id":"FK-112",
-      "name":"hero-banner",
       "group":"component"
     },
     {
