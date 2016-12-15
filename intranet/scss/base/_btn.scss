@@ -1,17 +1,16 @@
 // Button
 .btn {
-  // @include fousanmd;
   @include opensans-semibold;
   border-radius: rem(100px);
   border: 0;
   cursor: pointer;
   display: inline-block;
-  font-size: rem(13.5px);
+  font-size: rem(13px);
   font-weight: 400;
   line-height: 1.66;
   margin: rem(0 0 12px 0);
   outline: none;
-  padding: rem(10px 15px);
+  padding: rem(9px 15px);
   text-align: center;
   transition: .4s;
 
@@ -63,7 +62,7 @@
   }
 
   &--large {
-    font-size: rem(15px);
-    padding: rem(13px 24px 15px);
+    font-size: rem(14.5px);
+    padding: rem(11px 24px 13px);
   }
 }
