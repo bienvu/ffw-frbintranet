@@ -65,23 +65,12 @@
       }
 
       &:hover {
-        color: $white;
-
-        @include susy-media(mobileDesktopSmallOnly) {
-          color: $green-da;
-        }
+        color: $green-da;
       }
 
       &.is-active {
-        @include susy-media(mobileDesktopSmallOnly) {
-          color: $green-da;
-          background-color: $primary-color;
-        }
-
-        @include susy-media(desktop-small) {
-          background: $primary-color;
-          color: $white;
-        }
+        background-color: rgba(0, 80, 45, .9);
+        color: $gray-e6;
       }
     }
   }

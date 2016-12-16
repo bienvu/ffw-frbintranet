@@ -8,9 +8,6 @@
   transition: .3s;
   z-index: 9;
 
-  @include susy-media(desktop-wide) {
-    top: rem(51px);
-  }
 
   &__inner {
     color: $primary-color;
