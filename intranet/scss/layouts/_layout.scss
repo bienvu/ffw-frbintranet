@@ -23,15 +23,14 @@ html {
 body {
   // Disable in production mode;
   // @include show-breakpoints;
-  background-color: $gray-f5;
-  font-size: rem(17px);
-  line-height: 1.7;
+  font-size: rem($base-font-size);
+  line-height: $base-line-height;
   text-size-adjust: none;
 }
 
 .main {
-  background-color: $gray-f5;
-  border-bottom: rem(20px) solid $green-00;
+  background-color: $white;
+  border-bottom: rem(20px) solid $green-59;
   overflow: hidden;
   position: relative;
   z-index: 1;
@@ -55,28 +54,28 @@ body {
 }
 
 .page-full {
-  .block-system-main-block > .content-sidebar {
-    padding: 0;
+  .block-system-main-block > .content-sidebar  > .container {
+    max-width: inherit;
 
-    > .container {
-      max-width: inherit;
+    .container {
+      padding: 0 rem(15px);
 
-      .container {
-        padding: 0 rem(15px);
+      @include susy-media(tablet) {
+        padding: 0 rem(30px);
+      }
 
-        @include susy-media(tablet) {
-          padding: 0 rem(30px);
-        }
-
-        @include susy-media(desktop-wide) {
-          padding: 0;
-        }
+      @include susy-media(desktop-wide) {
+        padding: 0;
       }
     }
   }
 
   .container {
     margin: 0 auto;
+  }
+
+  .block-system-main-block > .content-sidebar {
+    padding: 0;
   }
 }
 

@@ -5,14 +5,14 @@
   &--inline,
   &--small,
   &--tiny,
-  &--icon {
-    // @include fousandm;
+  &--icon,
+  &--ordered {
     @include opensans-bold;
     margin: 0;
 
     li {
-      margin-bottom: rem(15px);
-      line-height: rem(22px);
+      margin-bottom: rem(10px);
+      line-height: rem(19px);
 
       a {
         display: block;
@@ -43,7 +43,6 @@
   &--tiny {
     li {
       font-size: rem(12px);
-      text-transform: uppercase;
     }
 
     .list--small {
@@ -59,8 +58,8 @@
 
         > a {
           color: $green-64;
-          margin-bottom: rem(11px 0 10px);
-          padding: rem(10px 0 11px 15px);
+          margin-bottom: rem(10px);
+          padding: rem(10px 0 3px 15px);
 
           &:before {
             @extend .icon-arrow-down:before;
@@ -70,7 +69,8 @@
     }
 
     li {
-      margin-bottom: rem(11px);
+      line-height: rem(26px);
+      margin-bottom: rem(14px);
 
       a {
         padding-left: rem(11px);
@@ -98,10 +98,10 @@
 
         ul {
           li {
-            margin-bottom: rem(15px);
+            margin-bottom: rem(4px);
 
             &:last-of-type {
-              margin-bottom: rem(20px);
+              margin-bottom: rem(6px);
             }
 
             a {
@@ -127,6 +127,27 @@
             @extend %list--icon;
           }
         }
+      }
+    }
+  }
+
+  &--ordered {
+    padding-left: rem(40px);
+    line-height: 1.4;
+
+    li {
+      position: relative;
+      margin-bottom: rem(5px);
+
+      &:before {
+        background: $primary-color;
+        border-radius: 100%;
+        content: '';
+        height: rem(6px);
+        left: rem(-15px);
+        position: absolute;
+        top: rem(8px);
+        width: rem(6px);
       }
     }
   }

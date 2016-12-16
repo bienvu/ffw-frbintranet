@@ -140,11 +140,7 @@
     }
 
     &:hover {
-      color: $white;
-
-      @include susy-media(mobileDesktopSmallOnly) {
-        color: $green-da;
-      }
+      color: $green-da;
     }
   }
 }

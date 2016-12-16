@@ -59,9 +59,8 @@ button {
 
 label,
 .fieldset-legend {
-  // @include fousandm;
   @include opensans-semibold;
-  font-size: rem(15.5px);
+  font-size: rem(15px);
   font-weight: 300;
   margin-bottom: rem(7px);
 }
@@ -75,9 +74,8 @@ $inputactivescale: rem(4px); // optimized for even numbers
 .form-type-checkbox,
 .form-type-radio {
   label {
-    // @include fousanno;
     @include opensans;
-    font-size: rem(17px);
+    font-size: rem(16px);
     line-height: rem(25px);
   }
 }
@@ -249,7 +247,6 @@ input[type='radio'] {
   }
 
   .ui-datepicker-title {
-    // @include fousandm;
     @include opensans-bold;
     color: $text-color;
     font-size: rem(14.8px);
@@ -316,7 +313,6 @@ input[type='radio'] {
     }
 
     th {
-      // @include fousanno;
       @include opensans;
       font-size: rem(13px);
       font-weight: normal;
@@ -344,7 +340,6 @@ input[type='radio'] {
     border-color: $gray-e6;
 
     .ui-state-default {
-      // @include fousandm;
       @include opensans-bold;
       background: transparent none repeat scroll 0 0;
       border: 0;
