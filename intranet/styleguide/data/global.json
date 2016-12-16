@@ -1,7 +1,7 @@
 {
   "site_title": "Intranet",
   "img_path": "images-demo/",
-  "project_path":"https://ffwagency.atlassian.net/browse/",
+  "project_path":"https://propeople-us.atlassian.net/browse/",
   "list_groups": [
     {
       "name":"basic",
@@ -49,6 +49,11 @@
     },
     {
       "name":"list",
+      "group":"component"
+    },
+    {
+      "id":"FRED-89",
+      "name":"block-hero",
       "group":"component"
     },
     {
@@ -102,11 +107,6 @@
     {
       "id":"FK-111",
       "name":"block-navigation-content",
-      "group":"component"
-    },
-    {
-      "id":"FK-112",
-      "name":"hero-banner",
       "group":"component"
     },
     {
