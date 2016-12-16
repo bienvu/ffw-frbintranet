@@ -43,6 +43,11 @@
 
 .header {
   padding-top: rem(50px);
+  transition: .3s;
+
+  &.has-warning {
+    padding-top: rem(102px);
+  }
 
   &__sticky {
     background-color: $green-9d;

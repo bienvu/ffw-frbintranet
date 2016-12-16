@@ -122,12 +122,21 @@
 
   $('.js-show-all').on('click', jsExpandAll);
 
-  // Close cookie
+  // Close block
   $('.js-cookie__button').on('click', function(){
     $('.js-cookie__close').animate({
       right: '-100%',
       height: 0
     }, 500);
+  });
+
+  if ($('.js-warning__close').hasClass('show')) {
+    $('.header').addClass('has-warning');
+  }
+  $('.js-warning__button').on('click', function(){
+    $('.js-warning__close').addClass('hidden');
+    $('.js-warning__close').removeClass('show');
+    $('.header').removeClass('has-warning');
   });
 
   // Filter vacancy.
