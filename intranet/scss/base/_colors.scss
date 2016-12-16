@@ -17,11 +17,9 @@ $gray-00: #003820;
 $gray-92: #929292;
 $gray-e6: #e6e6e6;
 $gray-75: #757575;
-
 $gray: #3f3f3f;
 $gray-fc: #fcfcfc;
 $gray-f5: #f5f5f5;
-$gray-e6: #e6e6e6;
 $gray-99: #999;
 $gray-33: #333;
 $gray-22: #222;
@@ -36,6 +34,7 @@ $blue: #51788d;
 $blue-38: #3898ec;
 // Green
 $green: #043520;
+$green-00: #00502d;
 $green-43: #43534e;
 $green-9d: #9db1ab;
 $green-01: #014226;
@@ -67,6 +66,6 @@ $red-ce: #ce0707;
 $pigeon-post: #aec9de;
 $pigeon-post-light: rgba($pigeon-post, .75);
 // Base colors
-$primary-color: $green;
+$primary-color: $green-00;
 $primary-color-hover: $green-64;
 $text-color: $gray;

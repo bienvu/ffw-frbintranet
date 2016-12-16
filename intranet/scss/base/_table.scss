@@ -38,7 +38,6 @@ table {
   }
 
   thead {
-    // @include fousandm;
     @include opensans-bold;
     background: $green-e1;
 
@@ -46,6 +45,10 @@ table {
       font-size: rem(15.5px);
       font-weight: 400;
       padding: rem(15px 10px);
+
+      &.header {
+        padding: rem(15px 10px);
+      }
     }
 
     a {
