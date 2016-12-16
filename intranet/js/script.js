@@ -123,19 +123,22 @@
   $('.js-show-all').on('click', jsExpandAll);
 
   // Close block
-  $('.js-cookie__button').on('click', function(){
-    $('.js-cookie__close').animate({
-      right: '-100%',
+  var jsCloseBlock = function(e) {
+    e.preventDefault();
+    $(this).parents('.js-close__block').animate({
+      opacity: 0,
       height: 0
     }, 500);
-  });
+  };
 
-  if ($('.js-warning__close').hasClass('show')) {
+  $('.js-warning__close').on('click', jsCloseBlock);
+  $('.js-cookie__close').on('click', jsCloseBlock);
+
+  // Block warning
+  if ($('.block-warning').length) {
     $('.header').addClass('has-warning');
   }
-  $('.js-warning__button').on('click', function(){
-    $('.js-warning__close').addClass('hidden');
-    $('.js-warning__close').removeClass('show');
+  $('.block-warning__button').on('click', function() {
     $('.header').removeClass('has-warning');
   });
 

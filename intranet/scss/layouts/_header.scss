@@ -76,6 +76,7 @@
   }
 
   &__wrap {
+    @extend %clearfix;
     margin: 0 auto;
     max-width: rem(1420px);
     padding: rem(0 10px);

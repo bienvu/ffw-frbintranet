@@ -1,13 +1,6 @@
 .block-warning {
   background-color: $yellow;
   box-shadow: 0 rem(4px) rem(8px) 0 rgba(0, 0, 0, .1);
-  left: 0;
-  position: fixed;
-  right: 0;
-  top: rem(50px);
-  transition: .3s;
-  z-index: 9;
-
 
   &__inner {
     color: $primary-color;
@@ -23,7 +16,8 @@
   &__icon,
   &__button {
     position: absolute;
-    top: rem(5px);
+    top: 50%;
+    transform: translate(0, -50%);
   }
 
   &__icon {
