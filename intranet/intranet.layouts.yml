@@ -1,3 +1,19 @@
+basiconecol:
+  label: Basic one column
+  category: Columns: 1
+  path: layouts/basiconecol
+  icon: basiconecol.png
+  template: panels-basiconecol
+  regions:
+    top:
+      label: Top content
+    middle:
+      label: Middle content
+    middle_full:
+      label: Middle Full content
+    bottom:
+      label: Bottom content
+
 basictwocol:
   label: Basic two column
   category: Columns: 2
@@ -14,18 +30,16 @@ basictwocol:
     bottom:
       label: Bottom content
 
-basiconecol:
-  label: Basic one column
-  category: Columns: 1
-  path: layouts/basiconecol
-  icon: basiconecol.png
-  template: panels-basiconecol
+basicthreecol:
+  label: Basic Three column
+  category: Columns: 3
+  path: layouts/basicthreecol
+  icon: basicthreecol.png
+  template: panels-basicthreecol
   regions:
-    top:
-      label: Top content
+    left:
+      label: Left content
     middle:
       label: Middle content
-    middle_full:
-      label: Middle Full content
-    bottom:
-      label: Bottom content
+    right:
+      label: Right content
