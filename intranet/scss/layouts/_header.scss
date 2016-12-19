@@ -43,6 +43,11 @@
 
 .header {
   padding-top: rem(50px);
+  transition: .3s;
+
+  &.has-warning {
+    padding-top: rem(102px);
+  }
 
   &__sticky {
     background-color: $green-9d;
@@ -71,6 +76,7 @@
   }
 
   &__wrap {
+    @extend %clearfix;
     margin: 0 auto;
     max-width: rem(1420px);
     padding: rem(0 10px);
