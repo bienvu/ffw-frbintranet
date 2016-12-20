@@ -12,8 +12,7 @@
     float: right;
 
     a {
-      color: $green-64;
-
+      &,
       &:focus,
       &:visited,
       &:hover {
@@ -44,8 +43,7 @@
 
     &.link--green {
       a {
-        color: $green-64;
-
+        &,
         &:focus,
         &:visited,
         &:hover {
