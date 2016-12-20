@@ -3,6 +3,7 @@
     'title': 'Frederiksbergs Frivillighedspris 2015',
     'date': '18. aug 2016 ',
     'link': '<a href="#">FRIVILLIGHED</a>',
+    'comment': '1',
     'image': '<img src="https://unsplash.it/822/400/?random">',
     'body': 'Hvem skal have Frederiksberg Kommunes Frivillighedspris 2015? Frederiksberg Kommune sætter pris på den frivillige indsats, og igen i år har du mulighed for at pege på, hvem du synes årets frivillighedspris skal gå til.'
   },
@@ -10,12 +11,14 @@
     'title': 'Ofrene i Paris mindes',
     'date': '16. aug 2016 ',
     'link': '<a href="#">FRIVILLIGHED</a>, <a href="#">Borger</a>',
+    'comment': '2',
     'body': 'Skoler, institutioner, rådhuset, plejecentre, biblioteker og alle andre dele af Frederiksberg Kommune holder et minuts stilhed klokken 12, hvor vi mindes ofrene i Paris.'
   },
   {
     'title': 'København lukker midlertidigt Kingosgade og Enghavevej fra fredag kl. 18 til mandag kl. 6.',
     'date': '10. aug 2016 ',
     'link': '<a href="#">Borger</a>',
+    'comment': '3',
     'image': '<img src="https://unsplash.it/822/400">',
     'body': 'Hvem skal have Frederiksberg Kommunes Frivillighedspris 2015? Frederiksberg Kommune sætter pris på den frivillige indsats, og igen i år har du mulighed for at pege på, hvem du synes årets frivillighedspris skal gå til.'
   },
@@ -28,8 +31,9 @@
           <div class="block-list-teaser__item">
             <h2 class="block-list-teaser__title"><a href="http://fk.ffwvietnam.com">{{ item.title }}</a></h2>
             <div class="meta">
+              <div class="meta__item meta__link color-green-light">{{ item.link }}</div>
               <div class="meta__item meta__date">{{ item.date }}</div>
-              <div class="meta__item meta__link">{{ item.link }}</div>
+              <div class="meta__item meta__comment">{{ item.comment }}</div>
             </div>
             <div class="block-list-teaser__image"><a href="#">{{ item.image }}</a></div>
             <div class="block-list-teaser__body text-large"><a>{{ item.body }}</a></div>

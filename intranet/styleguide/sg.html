@@ -17,20 +17,11 @@
 <body>
   <div class="header">
     <div class="header__sticky">
-      <div class="header__wrap">
-        <div class="header__left">
-          <div class="region region-header-left">
-            <div class="block-branding contextual-region block block-system block-system-branding-block" id="block-fk-theme-branding">
-              <a class="site-logo" rel="home" title="Home" href="/">
-                <img alt="Home" src="../logo.svg">
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="header__right">
+      <div class="header__wrap clearfix">
+        <div class="header__left js-header-wrap">
           <div class="menu-icon js-open"><i class="icon-menu"></i>
           </div>
-          <div class="region region-header">
+          <div class="region-header-left">
             <nav class="contextual-region block block-menu navigation menu--main" id="block-fk-theme-main-menu" aria-labelledby="block-fk-theme-main-menu-menu" role="navigation">
               <ul class="main-menu">
                 <li class="menu-icon js-close"><i class="icon-close"></i>
@@ -71,6 +62,15 @@
                 <li class="en"><a href="#">Min side</a>
                 </li>
               </ul>
+            </div>
+          </div>
+        </div>
+        <div class="header__right">
+          <div class="region-header-right">
+            <div class="block-branding contextual-region block block-system block-system-branding-block" id="block-fk-theme-branding">
+              <a class="site-logo" rel="home" title="Home" href="/">
+                <img alt="Home" src="../logo.svg">
+              </a>
             </div>
           </div>
         </div>
@@ -1225,7 +1225,7 @@
       <h2 class="component--title">factbox <a href="https://propeople-us.atlassian.net/browse/FK-100" target="_blank" class="small-tag" title="Open task">FK-100<i class="fa fa-external-link"></i></a></h2>
       <div class="component--demo">
         <div class="container">
-          <div class="factbox factbox--small factbox--light-green">
+          <div class="factbox factbox--small bg--light-green">
             <h4>Kategorier</h4>
             <ul class="list--small">
               <li><a href="#">Affald og miljø</a>
@@ -1276,7 +1276,7 @@
           <div class="component--html">
             <h4 class="component--source--title">Markup</h4>
             <pre class="brush: php">  <div class="container">
-    <div class="factbox factbox--small factbox--light-green">
+    <div class="factbox factbox--small bg--light-green">
       <h4>Kategorier</h4>
       <ul class="list--small">
         <li><a href="#">Affald og miljø</a></li>
@@ -1416,9 +1416,10 @@
               <div class="block-list-teaser__item">
                 <h2 class="block-list-teaser__title"><a href="http://fk.ffwvietnam.com">Frederiksbergs Frivillighedspris 2015</a></h2>
                 <div class="meta">
-                  <div class="meta__item meta__date">18. aug 2016</div>
-                  <div class="meta__item meta__link"><a href="#">FRIVILLIGHED</a>
+                  <div class="meta__item meta__link color-green-light"><a href="#">FRIVILLIGHED</a>
                   </div>
+                  <div class="meta__item meta__date">18. aug 2016</div>
+                  <div class="meta__item meta__comment">1</div>
                 </div>
                 <div class="block-list-teaser__image">
                   <a href="#">
@@ -1431,9 +1432,10 @@
               <div class="block-list-teaser__item">
                 <h2 class="block-list-teaser__title"><a href="http://fk.ffwvietnam.com">Ofrene i Paris mindes</a></h2>
                 <div class="meta">
-                  <div class="meta__item meta__date">16. aug 2016</div>
-                  <div class="meta__item meta__link"><a href="#">FRIVILLIGHED</a>, <a href="#">Borger</a>
+                  <div class="meta__item meta__link color-green-light"><a href="#">FRIVILLIGHED</a>, <a href="#">Borger</a>
                   </div>
+                  <div class="meta__item meta__date">16. aug 2016</div>
+                  <div class="meta__item meta__comment">2</div>
                 </div>
                 <div class="block-list-teaser__image">
                   <a href="#"></a>
@@ -1444,9 +1446,10 @@
               <div class="block-list-teaser__item">
                 <h2 class="block-list-teaser__title"><a href="http://fk.ffwvietnam.com">København lukker midlertidigt Kingosgade og Enghavevej fra fredag kl. 18 til mandag kl. 6.</a></h2>
                 <div class="meta">
-                  <div class="meta__item meta__date">10. aug 2016</div>
-                  <div class="meta__item meta__link"><a href="#">Borger</a>
+                  <div class="meta__item meta__link color-green-light"><a href="#">Borger</a>
                   </div>
+                  <div class="meta__item meta__date">10. aug 2016</div>
+                  <div class="meta__item meta__comment">3</div>
                 </div>
                 <div class="block-list-teaser__image">
                   <a href="#">
@@ -1473,8 +1476,9 @@
                   <div class="block-list-teaser__item">
             <h2 class="block-list-teaser__title"><a href="http://fk.ffwvietnam.com">Frederiksbergs Frivillighedspris 2015</a></h2>
             <div class="meta">
+              <div class="meta__item meta__link color-green-light"><a href="#">FRIVILLIGHED</a></div>
               <div class="meta__item meta__date">18. aug 2016 </div>
-              <div class="meta__item meta__link"><a href="#">FRIVILLIGHED</a></div>
+              <div class="meta__item meta__comment">1</div>
             </div>
             <div class="block-list-teaser__image"><a href="#"><img src="https://unsplash.it/822/400/?random"></a></div>
             <div class="block-list-teaser__body text-large"><a>Hvem skal have Frederiksberg Kommunes Frivillighedspris 2015? Frederiksberg Kommune sætter pris på den frivillige indsats, og igen i år har du mulighed for at pege på, hvem du synes årets frivillighedspris skal gå til.</a></div>
@@ -1482,8 +1486,9 @@
                   <div class="block-list-teaser__item">
             <h2 class="block-list-teaser__title"><a href="http://fk.ffwvietnam.com">Ofrene i Paris mindes</a></h2>
             <div class="meta">
+              <div class="meta__item meta__link color-green-light"><a href="#">FRIVILLIGHED</a>, <a href="#">Borger</a></div>
               <div class="meta__item meta__date">16. aug 2016 </div>
-              <div class="meta__item meta__link"><a href="#">FRIVILLIGHED</a>, <a href="#">Borger</a></div>
+              <div class="meta__item meta__comment">2</div>
             </div>
             <div class="block-list-teaser__image"><a href="#"></a></div>
             <div class="block-list-teaser__body text-large"><a>Skoler, institutioner, rådhuset, plejecentre, biblioteker og alle andre dele af Frederiksberg Kommune holder et minuts stilhed klokken 12, hvor vi mindes ofrene i Paris.</a></div>
@@ -1491,8 +1496,9 @@
                   <div class="block-list-teaser__item">
             <h2 class="block-list-teaser__title"><a href="http://fk.ffwvietnam.com">København lukker midlertidigt Kingosgade og Enghavevej fra fredag kl. 18 til mandag kl. 6.</a></h2>
             <div class="meta">
+              <div class="meta__item meta__link color-green-light"><a href="#">Borger</a></div>
               <div class="meta__item meta__date">10. aug 2016 </div>
-              <div class="meta__item meta__link"><a href="#">Borger</a></div>
+              <div class="meta__item meta__comment">3</div>
             </div>
             <div class="block-list-teaser__image"><a href="#"><img src="https://unsplash.it/822/400"></a></div>
             <div class="block-list-teaser__body text-large"><a>Hvem skal have Frederiksberg Kommunes Frivillighedspris 2015? Frederiksberg Kommune sætter pris på den frivillige indsats, og igen i år har du mulighed for at pege på, hvem du synes årets frivillighedspris skal gå til.</a></div>

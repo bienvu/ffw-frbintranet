@@ -43,16 +43,16 @@
  */
 #}
 <div class="page">
-  {% if page.header %}
+  {% if page.header_left %}
     <header class="header">
       <div class="header__sticky">
-        <div class="header__wrap">
-          <div class="header__left">
-            {{ page.header_right }}
+        <div class="header__wrap clearfix">
+          <div class="header__left js-header-wrap">
+            <div class="menu-icon js-open"><i class="icon-menu"></i></div>
+            {{ page.header_left }}
           </div>
           <div class="header__right">
-            <div class="menu-icon js-open"><i class="icon-menu"></i></div>
-            {{ page.header }}
+            {{ page.header_right }}
           </div>
         </div>
       </div>
@@ -65,7 +65,7 @@
     </div>{# /.layout-content #}
   </main>
   <footer class="footer">
-    <div class="footer__wrap">
+    <div class="footer__wrap clearfix">
       <div class="footer__item footer__col_one">
         {{ page.footer_col_one }}
       </div>

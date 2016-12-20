@@ -133,6 +133,6 @@ $susy-media: (
 
   @include susy-media(desktop-wide) {
     @include container($susy-desktop-wide);
-    padding: rem(0 10px);
+    padding: rem(0 30px);
   }
 }
