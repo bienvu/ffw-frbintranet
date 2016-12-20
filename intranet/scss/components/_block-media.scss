@@ -1,16 +1,12 @@
 .block-media {
-  margin-bottom: rem(45px);
-
-  @include susy-media(mobileLandscape) {
-    margin-bottom: rem(44px);
-  }
+  margin-bottom: rem(14px);
 
   &__image {
-    margin-bottom: rem(7px);
+    margin-bottom: rem(27px);
   }
 
   &__video {
-    margin-bottom: rem(8px);
+    margin-bottom: rem(28px);
 
     a {
       @extend .icon-control-play;
@@ -44,7 +40,6 @@
 
   &__description,
   &__title {
-    // @include fousanmd;
     @include opensans-semibold;
     font-size: rem(13.5px);
     padding: rem(5px 5px 3px 0);
@@ -52,8 +47,6 @@
 
   &__title {
     label {
-      // @include fousanmd;
-      @include opensans-semibold;
       font-size: rem(13.5px);
       padding-right: rem(3px);
     }

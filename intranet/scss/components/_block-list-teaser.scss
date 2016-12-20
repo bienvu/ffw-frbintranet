@@ -1,7 +1,7 @@
 .meta {
   @extend %clearfix;
   font-size: rem(14px);
-  margin-bottom: rem(20px);
+  margin-bottom: rem(8px);
 
   &__date,
   &__link {
@@ -56,27 +56,38 @@
 
 .block-list-teaser {
   padding-bottom: rem(55px);
-  padding-top: rem(11px);
+  padding-top: rem(24px);
 
   &__item {
-    border-bottom: rem(1px) solid $gray;
-    margin-bottom: rem(39px);
-    padding-bottom: rem(16px);
+    border-bottom: rem(1px) solid $green-9d;
+    margin-bottom: rem(28px);
+    padding-bottom: rem(5px);
+
+    &:last-of-type {
+      margin-bottom: rem(42px);
+    }
   }
 
   &__title {
-    margin-bottom: rem(9px);
+    font-size: rem(22.4px);
+    line-height: rem(27px);
+    margin-bottom: rem(5px);
+    margin-top: 0;
   }
 
   &__image {
     line-height: 0;
+    margin-bottom: rem(19px);
+    margin-top: rem(25px);
 
-    .block-media {
+    &.block-media {
       margin-bottom: 0;
     }
   }
 
   &__body {
+    margin-top: 0;
+
     a {
       color: $gray;
 

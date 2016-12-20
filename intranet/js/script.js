@@ -100,7 +100,6 @@
 
   // Show All.
   var jsExpandAll = function(classDirect, classHeader, classContent) {
-    //e.preventDefault();
     var $itemDirect = classDirect,
         $classHeader = classHeader,
         $classContent = classContent;
@@ -114,34 +113,11 @@
       }
     });
   };
-
-    jsExpandAll($jsdirect, $acodion_header, $accordion_content );
+  jsExpandAll($jsdirect, $acodion_header, $accordion_content );
 
   var $jsHeader = $('.js-header'),
       $jsContent = $('.js-show-content');
     jsExpandAll($jsdirect, $jsHeader, $jsContent );
-  //$('.js-show-all').on('click', jsExpandAll);
-
-  // js accordion
-  // var accordionFunction = function(classItem, childSelector) {
-  //   var $item = classItem;
-  //   $item.on('click', function () {
-  //     var $this = $(this);
-  //         $childSelector = $(childSelector);
-  //     if (!$this.hasClass('active')) {
-  //       $this.addClass('active');
-  //       $childSelector.slideDown("slow");
-  //     }
-  //     else {
-  //       $this.removeClass('active');
-  //       $childSelector.slideUp("slow");
-  //     }
-  //   });
-  // };
-
-  // var $classItem = $('.js-show-all-menu'),
-  //     $childSelector = $('.js-show-content > li');
-  // accordionFunction($classItem,$childSelector);
 
   // Tooltip
   $('.tooltip').tipso({

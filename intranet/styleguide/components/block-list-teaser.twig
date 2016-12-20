@@ -23,24 +23,27 @@
     'body': 'Hvem skal have Frederiksberg Kommunes Frivillighedspris 2015? Frederiksberg Kommune sætter pris på den frivillige indsats, og igen i år har du mulighed for at pege på, hvem du synes årets frivillighedspris skal gå til.'
   },
 ]%}
+
 {% block blockListNews %}
   <div class="container">
     <div class="block-list-teaser">
       <div class="block-list-teaser__list">
         {% for item in news%}
           <div class="block-list-teaser__item">
-            <h2 class="block-list-teaser__title"><a href="http://fk.ffwvietnam.com">{{ item.title }}</a></h2>
             <div class="meta">
-              <div class="meta__item meta__link color-green-light">{{ item.link }}</div>
+              <div class="meta__item meta__link link--green">{{ item.link }}</div>
               <div class="meta__item meta__date">{{ item.date }}</div>
-              <div class="meta__item meta__comment">{{ item.comment }}</div>
+              <div class="meta__item meta__comment-count"><a href="#">{{ item.comment }} <i class="icon-bubble"></i></a></div>
             </div>
-            <div class="block-list-teaser__image"><a href="#">{{ item.image }}</a></div>
+            <h2 class="block-list-teaser__title"><a href="http://fk.ffwvietnam.com">{{ item.title }}</a></h2>
+            {% if item.image is not empty %}
+              <div class="block-list-teaser__image"><a href="#">{{ item.image }}</a></div>
+            {% endif %}
             <div class="block-list-teaser__body text-large"><a>{{ item.body }}</a></div>
           </div>
         {% endfor %}
       </div>
-      <div class="block-list-teaser__link pager-load-more"><a class="btn btn--large" href="#">Indlæs flere nyheder</a></div>
+      <div class="block-list-teaser__link pager-load-more"><a class="btn" href="#">Se flere nyheder</a></div>
     </div>
   </div>
 {% endblock %}
