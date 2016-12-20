@@ -152,6 +152,11 @@
       "id":"FK-62",
       "name":"block-search-results",
       "group":"component"
+    },
+    {
+      "id":"FK-86",
+      "name":"block-list-topic",
+      "group":"component"
     }
   ]
 }
