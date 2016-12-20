@@ -54,28 +54,28 @@ body {
 }
 
 .page-full {
-  .block-system-main-block > .content-sidebar  > .container {
-    max-width: inherit;
+  .block-system-main-block > .content-sidebar {
+    padding: 0;
 
-    .container {
-      padding: 0 rem(15px);
+    > .container {
+      max-width: inherit;
 
-      @include susy-media(tablet) {
-        padding: 0 rem(30px);
-      }
+      .container {
+        padding: 0 rem(15px);
 
-      @include susy-media(desktop-wide) {
-        padding: 0;
+        @include susy-media(tablet) {
+          padding: 0 rem(30px);
+        }
+
+        @include susy-media(desktop-wide) {
+          padding: 0;
+        }
       }
     }
   }
 
   .container {
     margin: 0 auto;
-  }
-
-  .block-system-main-block > .content-sidebar {
-    padding: 0;
   }
 }
 
@@ -159,7 +159,6 @@ body {
 
   input[type='submit'],
   button {
-    // @include fousanmd;
     @include opensans-semibold;
     border-radius: rem(100px);
     border: 0;

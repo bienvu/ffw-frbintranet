@@ -1,0 +1,53 @@
+.block-submenu {
+  &__title {
+    float: left;
+    font-size: rem(21px);
+    margin: 0;
+  }
+
+  &__header {
+    margin-bottom: rem(17px);
+    overflow: hidden;
+
+    &.active {
+      .show-all:before {
+        @extend .icon-arrow-up:before;
+      }
+    }
+  }
+
+  .show-all {
+    @include opensans-bold;
+    cursor: pointer;
+    float: right;
+    font-size: rem(12px);
+    margin-top: rem(13px);
+    padding-right: rem(15px);
+    position: relative;
+
+    &:before {
+      @extend %icons;
+      @extend .icon-arrow-down:before;
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translate(0,-50%);
+    }
+  }
+
+  .list--icon {
+    > li {
+      display: none;
+
+      &.active {
+        display: block;
+      }
+    }
+
+    &.active {
+      li {
+        display: block;
+      }
+    }
+  }
+}

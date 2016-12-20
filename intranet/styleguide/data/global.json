@@ -52,6 +52,10 @@
       "group":"component"
     },
     {
+      "name":"block-submenu",
+      "group":"component"
+    },
+    {
       "id":"FRED-89",
       "name":"block-hero",
       "group":"component"

@@ -9,6 +9,7 @@
   &--ordered {
     @include opensans-bold;
     margin: 0;
+    overflow: hidden;
 
     li {
       margin-bottom: rem(10px);
@@ -30,16 +31,6 @@
     }
   }
 
-  &--small {
-    li {
-      font-size: rem(16px);
-    }
-
-    .list--tiny {
-      @extend %list--tiny;
-    }
-  }
-
   &--tiny {
     li {
       font-size: rem(12px);
@@ -51,26 +42,62 @@
   }
 
   &--icon {
-    > li {
-      &.active {
-        border-bottom: 2px solid $green-64;
-        border-top: 2px solid $green-64;
+    li {
+      line-height: rem(26px);
+      margin-bottom: rem(8px);
 
+      &.active {
         > a {
           color: $green-64;
-          margin-bottom: rem(10px);
-          padding: rem(10px 0 3px 15px);
+          margin-bottom: rem(8px);
+          padding: rem(10px 0 0 15px);
 
+          &:before {
+            @extend .icon-arrow-right:before;
+          }
+        }
+
+        &.expanded > a {
           &:before {
             @extend .icon-arrow-down:before;
           }
         }
-      }
-    }
 
-    li {
-      line-height: rem(26px);
-      margin-bottom: rem(14px);
+        > ul {
+          padding-left: rem(20px);
+
+          a {
+            padding-top: 0;
+            padding-bottom: 0;
+
+            &:before {
+              content: '';
+            }
+          }
+
+          li {
+            &.active {
+              margin-bottom: 0;
+
+              > a {
+                padding-left: rem(20px);
+
+                &:before {
+                  @extend .icon-arrow-right:before;
+                }
+              }
+
+              &.expanded {
+                > a {
+                  &:before {
+                    @extend .icon-arrow-down:before;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
 
       a {
         padding-left: rem(11px);
@@ -82,51 +109,14 @@
           margin-right: rem(8px);
         }
       }
+    }
+
+    > li {
+      margin-bottom: rem(14px);
 
       &.active {
-        > a {
-          color: $green-64;
-        }
-
-        > ul {
-          padding-left: rem(30px);
-
-          ul {
-            padding-left: rem(5px);
-          }
-        }
-
-        ul {
-          li {
-            margin-bottom: rem(4px);
-
-            &:last-of-type {
-              margin-bottom: rem(6px);
-            }
-
-            a {
-              padding-left: 0;
-
-              &:before {
-                content: '';
-              }
-            }
-
-            &.active {
-              a {
-                padding-left: rem(10px);
-
-                &:before {
-                  @extend .icon-arrow-right:before;
-                }
-              }
-            }
-          }
-
-          &.list--icon {
-            @extend %list--icon;
-          }
-        }
+        border-bottom: 2px solid $green-64;
+        border-top: 2px solid $green-64;
       }
     }
   }
