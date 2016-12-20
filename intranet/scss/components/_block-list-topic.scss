@@ -1,0 +1,58 @@
+.block-list-topic {
+  @extend %clearfix;
+
+  .meta {
+    margin-bottom: 0;
+  }
+
+  &__attachment,
+  &__item {
+    border-bottom: rem(1px) solid rgba(142, 199, 114, .31);
+    padding: rem(10px 0);
+
+    @include susy-media(mobileLarge) {
+      border-bottom: 0;
+      padding: rem(10px 20px);
+    }
+  }
+
+  &__image {
+    margin-bottom: rem(14px);
+
+    @include susy-media(mobileLarge) {
+      margin-left: rem(-20px);
+      margin-right: rem(-20px);
+    }
+  }
+
+  &__title {
+    margin-bottom: rem(3px);
+    margin-top: 0;
+  }
+
+  &__content {
+    font-size: rem(14px);
+    line-height: rem(22px);
+
+    a {
+      color: $text-color;
+
+      &:hover {
+        color: $primary-color-hover;
+      }
+    }
+
+    p {
+      margin-bottom: rem(10px);
+    }
+  }
+
+  &__more-link {
+    margin-top: rem(20px);
+
+    @include susy-media(mobileLarge) {
+      margin-top: rem(-8px);
+      padding: rem(0 20px);
+    }
+  }
+}

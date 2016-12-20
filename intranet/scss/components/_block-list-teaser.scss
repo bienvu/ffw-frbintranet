@@ -8,6 +8,24 @@
     float: left;
   }
 
+  &__comment-count {
+    float: right;
+
+    a {
+      &,
+      &:focus,
+      &:visited,
+      &:hover {
+        color: $green-64;
+      }
+    }
+
+    i {
+      font-size: rem(18px);
+      line-height: 0;
+    }
+  }
+
   &__item {
     &:first-of-type {
       padding-right: rem(3px);
@@ -15,15 +33,24 @@
   }
 
   &__date {
-    // @include fousanmd;
     @include opensans-semibold;
     color: $gray-92;
   }
 
   &__link {
-    // @include fousandm;
     @include opensans-semibold;
     text-transform: uppercase;
+
+    &.link--green {
+      a {
+        &,
+        &:focus,
+        &:visited,
+        &:hover {
+          color: $green-64;
+        }
+      }
+    }
   }
 }
 
