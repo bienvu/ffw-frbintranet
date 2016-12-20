@@ -122,12 +122,24 @@
 
   $('.js-show-all').on('click', jsExpandAll);
 
-  // Close cookie
-  $('.js-cookie__button').on('click', function(){
-    $('.js-cookie__close').animate({
-      right: '-100%',
+  // Close block
+  var jsCloseBlock = function(e) {
+    e.preventDefault();
+    $(this).parents('.js-close__block').animate({
+      opacity: 0,
       height: 0
     }, 500);
+  };
+
+  $('.js-warning__close').on('click', jsCloseBlock);
+  $('.js-cookie__close').on('click', jsCloseBlock);
+
+  // Block warning
+  if ($('.block-warning').length) {
+    $('.header').addClass('has-warning');
+  }
+  $('.block-warning__button').on('click', function() {
+    $('.header').removeClass('has-warning');
   });
 
   // Filter vacancy.

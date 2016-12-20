@@ -189,3 +189,41 @@ body {
     }
   }
 }
+
+.region-content {
+  @extend %clearfix;
+}
+
+// layout three column
+.three-column {
+  background-color: $green-f7;
+  padding: rem(20px 0);
+
+  &__item {
+    float: left;
+
+    @include susy-media(desktop) {
+      padding: rem(0 10px);
+      width: calc(100% / 3);
+    }
+  }
+
+  &__content {
+    @include susy-media(tabletOnly) {
+      padding: rem(0 10px);
+      width: calc((100% / 3) * 2);
+      float: left;
+    }
+  }
+
+  &__right {
+    @include susy-media(tablet) {
+      padding: rem(0 10px);
+      width: calc(100% / 3);
+    }
+  }
+
+  .block {
+    margin-bottom: 20px;
+  }
+}

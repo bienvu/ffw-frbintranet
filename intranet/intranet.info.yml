@@ -5,15 +5,15 @@ package: Intranet
 core: 8.x
 base theme: classy
 libraries:
-  - fk_theme/enquire
-  - fk_theme/modernizr
-  - fk_theme/media.match
-  - fk_theme/bootstrap-select
-  - fk_theme/tipso
-  - fk_theme/global-styling
+  - intranet/enquire
+  - intranet/modernizr
+  - intranet/media.match
+  - intranet/bootstrap-select
+  - intranet/tipso
+  - intranet/global-styling
 
 regions:
-  header: 'Header Left'
+  header_left: 'Header Left'
   header_right: 'Header Right'
   header_bottom: 'Header Bottom'
   content: 'Content'

@@ -1,0 +1,45 @@
+.block-warning {
+  background-color: $yellow;
+  box-shadow: 0 rem(4px) rem(8px) 0 rgba(0, 0, 0, .1);
+
+  &__inner {
+    color: $primary-color;
+    padding: rem(15px 50px 10px);
+    position: relative;
+  }
+
+  &__text {
+    @include opensans-semibold;
+    font-size: rem(15.5px);
+  }
+
+  &__icon,
+  &__button {
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+  }
+
+  &__icon {
+    font-size: rem(28px);
+    left: rem(10px);
+
+    @include susy-media(tablet) {
+      left: 0;
+    }
+  }
+
+  &__button {
+    color: $primary-color;
+    font-size: rem(28px);
+    right: rem(10px);
+
+    @include susy-media(tablet) {
+      right: 0;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}

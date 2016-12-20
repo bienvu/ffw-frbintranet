@@ -1,19 +1,10 @@
 {% block navigation %}
 <div class="header">
   <div class="header__sticky">
-    <div class="header__wrap">
-      <div class="header__left">
-        <div class="region region-header-left">
-          <div class="block-branding contextual-region block block-system block-system-branding-block" id="block-fk-theme-branding">
-              <a class="site-logo" rel="home" title="Home" href="/">
-                  <img alt="Home" src="../logo.svg">
-              </a>
-          </div>
-        </div>
-      </div>
-      <div class="header__right">
+    <div class="header__wrap clearfix">
+      <div class="header__left js-header-wrap">
         <div class="menu-icon js-open"><i class="icon-menu"></i></div>
-        <div class="region region-header">
+        <div class="region-header-left">
           <nav class="contextual-region block block-menu navigation menu--main" id="block-fk-theme-main-menu" aria-labelledby="block-fk-theme-main-menu-menu" role="navigation">
             <ul class="main-menu">
               <li class="menu-icon js-close"><i class="icon-close"></i></li>
@@ -52,7 +43,18 @@
           </div>
         </div>
       </div>
+      <div class="header__right">
+        <div class="region-header-right">
+          <div class="block-branding contextual-region block block-system block-system-branding-block" id="block-fk-theme-branding">
+            <a class="site-logo" rel="home" title="Home" href="/">
+              <img alt="Home" src="../logo.svg">
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
+
+    {% include '../components/block-warning.twig' %}
   </div>
 </div>
 {% endblock %}
