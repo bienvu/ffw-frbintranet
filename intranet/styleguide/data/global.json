@@ -94,6 +94,11 @@
       "group":"component"
     },
     {
+      "id":"FK-104",
+      "name":"teaser-detail",
+      "group":"component"
+    },
+    {
       "id":"FK-107",
       "name":"block-accordion",
       "group":"component"

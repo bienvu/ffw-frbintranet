@@ -1,6 +1,4 @@
 .breadcrumb {
-  margin-bottom: rem(18px);
-
   ol {
     @extend %clearfix;
     list-style: none;
@@ -8,7 +6,6 @@
 
   li {
     @extend .icon-arrow-right;
-    // @include fousandm;
     @include opensans-semibold;
     float: left;
     font-size: rem(13.5px);

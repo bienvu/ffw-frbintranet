@@ -1,0 +1,28 @@
+{% set media_image = 'https://unsplash.it/822/400/?random' %}
+{% block TeaserDetail %}
+  <div class="container">
+    {% include 'breadcrumb.twig' %}
+    <div class="teaser-detail">
+      <h1 class="teaser-detail__title">Vi har fået et bedre erhvervsklima</h1>
+      <div class="meta">
+        <div class="meta__item meta__date">18. aug 2016 </div>
+        <div class="meta__item meta__link"><a href="#">NYHED</a></div>
+        <div class="meta__item meta__comment-count"><a href="#">2 <i class="icon-bubble"></i></a></div>
+      </div>
+
+      <div class="block-media">
+        {% if media_image is not empty%}
+          <div class="block-media__image"><a href="#"><img src="{{ media_image }}"></a></div>
+        {% endif %}
+        {% if media_video is not empty%}
+          <div class="block-media__video"><a href="#"><img src="{{ media_video }}"></a></div>
+        {% endif %}
+        <div class="block-media__title"><label style="display: inline;">Foto:</label>Marcus Hansen</div>
+      </div>
+
+      <div class="text-large">Hvem skal have Frederiksberg Kommunes Frivillighedspris 2015? Frederiksberg Kommune sætter pris på den frivillige indsats, og igen i år har du mulighed for at pege på, hvem du synes årets frivillighedspris skal gå til.</div>
+
+      <p>Prisen bliver både givet til en frivillig forening eller organisation og en enkeltperson og uddeles den 22. oktober 2015.<br><br>Det er <a class="link--underline" href="#">Socialudvalget</a> der beslutter, hvem der skal have frivillighedsprisen, men det er privatpersoner og foreninger på Frederiksberg der indstiller netop dem, de synes skal hyldes. Prisen er på 15.000 kr. til foreninger og organisationer og der er 10.000 kr. til den&nbsp; enkeltperson, der modtager året frivillighedspris. Frederiksberg Kommune skal have din indstilling senest den 25. august 2015.</p>
+    </div>
+  </div>
+{% endblock %}

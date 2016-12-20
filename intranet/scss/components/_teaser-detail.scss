@@ -1,0 +1,12 @@
+.teaser-detail {
+  padding-top: rem(21px);
+  padding-bottom: rem(20px);
+
+  &__title {
+    color: $primary-color;
+  }
+
+  .meta {
+    margin-bottom: rem(18px);
+  }
+}
