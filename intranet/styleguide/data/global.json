@@ -181,6 +181,11 @@
       "id":"FK-105",
       "name":"block-comment",
       "group":"component"
+    },
+    {
+      "id":"FK-107",
+      "name":"block-activity",
+      "group":"component"
     }
   ]
 }

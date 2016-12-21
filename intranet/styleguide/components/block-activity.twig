@@ -1,0 +1,21 @@
+{% block blockActivity %}
+  <div class="container">
+    <div class="block-activity">
+      <h5 class="block-activity__title hidden-on-mobile ">Seneste aktivitet i gruppen</h5>
+      <div class="block-activity__list">
+      {% for i in 0..4 %}
+        <div class="block-activity__item">
+          <div class="block-activity__image"><img src="http://uploads.webflow.com/57f3afc6fbae76684da14d1a/5811bad47ce93128786adcfb_Anne%20Nielsen.jpg"></div>
+          <div class="block-activity__content">
+            <div class="block-activity__info">
+              <a href="#" class="link--underline block-activity__mail">nick.ellegaard@frederiksberg.dk</a>
+              <div class="block-activity__date">07-09-2016</div>
+            </div>
+            <div class="block-activity__text"><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio.</p></div>
+          </div>
+        </div>
+      {% endfor %}
+      </div>
+    </div>
+  </div>
+{% endblock %}
