@@ -1,0 +1,56 @@
+.block-comment {
+  &__item {
+    @extend %clearfix;
+    margin-bottom: rem(24px);
+  }
+
+  &__indented {
+    margin-left: rem(25px);
+
+    @include susy-media(mobileLarge) {
+      margin-left: rem(30px);
+    }
+  }
+
+  &__author-picture {
+    float: left;
+    width: 60px;
+
+    img {
+      border-radius: 100%;
+      height: rem(60px);
+      width: rem(60px);
+    }
+
+    + .block-comment__content {
+        margin-left: rem(80px);
+    }
+  }
+
+  &__submitted {
+    overflow: hidden;
+  }
+
+  &__author-name,
+  &__post-date {
+    @include opensans-semibold;
+    float: left;
+    font-size: rem(17px);
+    line-height: rem(24px);
+    margin-bottom: rem(2px);
+  }
+
+  &__author-name {
+    padding-right: rem(10px);
+  }
+
+  &__post-date {
+    color: $gray-92;
+  }
+
+  &__text {
+    font-size: rem(15px);
+    line-height: rem(26px);
+    padding-bottom: rem(5px);
+  }
+}

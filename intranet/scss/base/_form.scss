@@ -10,9 +10,10 @@ button {
 .form-date {
   border: rem(1px) solid $gray-e6;
   color: $text-color;
-  font-size: rem(15px);
+  font-size: rem(14.5px);
+  line-height: 1.42857;
   margin-bottom: rem(15px);
-  padding: rem(5px 15px);
+  padding: rem(8px 15px);
 
   &::-ms-clear {
     display: none;
