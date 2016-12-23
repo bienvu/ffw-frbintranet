@@ -1,0 +1,64 @@
+.block-list-market {
+  &__item {
+    @extend %clearfix;
+    border-bottom: rem(1px) solid rgba(100, 143, 20, .25);
+    padding: rem(20px 0 13px);
+
+    @include susy-media(mobileLarge) {
+      padding: rem(20px 30px 13px);
+    }
+
+    &:hover {
+      background-color: $green-f7;
+    }
+  }
+
+  &__image {
+    float: left;
+    padding-right: rem(5px);
+    width: 33.33%;
+
+    @include susy-media(tablet) {
+      padding-right: 0;
+      width: rem(200px);
+    }
+  }
+
+  &__content {
+    float: left;
+    padding-left: rem(5px);
+    width: 66.66%;
+
+    @include susy-media(tablet) {
+      float: none;
+      margin-left: rem(250px);
+      padding-left: 0;
+      width: auto;
+    }
+  }
+
+  &__title {
+    margin: rem(-3px 0 3px);
+  }
+
+  &__body {
+    font-size: rem(15.5px);
+    line-height: rem(22px);
+
+    a {
+      color: $gray;
+
+      &:hover {
+        color: $primary-color-hover;
+      }
+    }
+
+    p {
+      margin-bottom: rem(10px);
+    }
+  }
+
+  .meta {
+    margin-bottom: 0;
+  }
+}
