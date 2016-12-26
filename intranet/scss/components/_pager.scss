@@ -1,28 +1,33 @@
 .pager {
   &__items {
     @extend %clearfix;
-    margin: rem(23px) 0;
+    margin: rem(23px 0);
     text-align: center;
+
+    @include susy-media(mobileLarge) {
+      margin: rem(30px 0 23px);
+    }
   }
 
   &__item {
     display: inline-block;
-    font-size: rem(16px);
+    font-size: rem(15.5px);
     padding: 0;
 
     a {
       display: inline-block;
-      padding: 0 rem(4px);
+      padding: rem(5px 4px 0);
+      color: $green-8e;
 
       &:hover {
-        color: $primary-color;
+        color: $green-9d;
         cursor: pointer;
       }
     }
 
     &.is-active {
       a {
-        color: $primary-color-hover;
+        color: $primary-color;
       }
     }
 
@@ -36,23 +41,18 @@
 
     &--previous,
     &--next {
-      font-size: rem(15px);
-      display: none;
-
-      @include susy-media(tablet) {
-        display: block;
-      }
+      font-size: rem(14px);
 
       a {
-        // @include fousanmd;
         @include opensans-bold;
         background-color: $gray-e6;
-        border-radius: rem(5px);
+        border-radius: rem(100px);
         line-height: rem(22px);
-        padding: rem(8px 15px 10px);
+        padding: rem(7px 15px 8px);
+        color: $primary-color;
 
         &:hover {
-          background-color: $primary-color-hover;
+          background-color: $green-59;
           color: $white;
         }
       }
