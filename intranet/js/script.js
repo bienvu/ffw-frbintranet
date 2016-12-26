@@ -177,4 +177,7 @@
       $childSelector = $('.js-show-content > li');
   accordionFunction($classItem,$childSelector);
 
+  // Equal height
+  $('.js-navigation__height').matchHeight();
+
 }(this, this.document, this.jQuery));

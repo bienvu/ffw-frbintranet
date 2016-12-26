@@ -34,3 +34,9 @@ tipso:
     js/lib/tipso.min.js: {}
   dependencies:
     - core/jquery
+
+matchHeight-min:
+  js:
+    js/lib/jquery.matchHeight-min.js: {}
+  dependencies:
+    - core/jquery

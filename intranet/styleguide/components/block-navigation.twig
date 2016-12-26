@@ -1,53 +1,51 @@
-{% set navigation = [
-    {
-      'navigation_icon' : '../images/icon-light.svg',
-      'navigation_title' : 'Trafik og parkering'
-    },
-    {
-      'navigation_icon' : '../images/icon-bin.svg',
-      'navigation_title' : 'Affald og miljø'
-    },
-    {
-      'navigation_icon' : '../images/icon-kite.svg',
-      'navigation_title' : 'Pasning og skole'
-    },
-    {
-      'navigation_icon' : '../images/icon-bin.svg',
-      'navigation_title' : 'Personlige forhold'
-    },
-    {
-      'navigation_icon' : '../images/icon-kite.svg',
-      'navigation_title' : 'Uddannelse'
-    },
-    {
-      'navigation_icon' : '../images/icon-light.svg',
-      'navigation_title' : 'Bolig'
-    }
-  ]
-%}
-
 {% block blockNavigation %}
   <div class="container">
     <div class="block-navigation">
-      <div class="block-navigation__list">
-        {% for item in navigation %}
-          <div class="block-navigation__item">
-            <div class="block-navigation__icon"><a href="#"><img src="{{ item.navigation_icon }}"></a></div>
-            <div class="block-navigation__content">
-              <h3 class="block-navigation__title"><a href="#">{{ item.navigation_title }}</a></h3>
-                <ul class="list">
-                  <li><a href="#">Nye regler for kontanthjælp</a>
-                  </li>
-                  <li><a href="#">UngeGuiden</a>
-                  </li>
-                  <li><a href="#">Jobcenter </a>
-                  </li>
-                </ul>
-              <div class="block-navigation__button hidden-on-mobile"><a class="btn btn--bg-gray" href="#">Se alle</a></div>
-            </div>
+      {% for i in 0..2 %}
+        <div class="block-navigation__item js-navigation__height">
+          <div class="block-navigation__inner">
+            <h3 class="block-navigation__title"><a href="#">Aktiviteter i kommunen</a></h3>
+            <div class="block-navigation__button hidden-on-mobile"><a class="btn btn--bg-gray" href="#">Se alle</a></div>
           </div>
-        {% endfor %}
-      </div>
+        </div>
+
+        <div class="block-navigation__item js-navigation__height">
+          <div class="block-navigation__inner">
+            <h3 class="block-navigation__title"><a href="#">Bruger - og borgerundersøgelse</a></h3>
+            <div class="block-navigation__list">
+              <div class="block-navigation__sub-item"><a href="#">Bestyrelsesansvarsforsikring</a></div>
+              <div class="block-navigation__sub-item"><a href="#">rejseforsikring</a></div>
+            </div>
+            <div class="block-navigation__button hidden-on-mobile"><a class="btn btn--bg-gray" href="#">Se alle</a></div>
+          </div>
+        </div>
+
+        <div class="block-navigation__item js-navigation__height">
+          <div class="block-navigation__inner">
+            <h3 class="block-navigation__title"><a href="#">Forsikring</a></h3>
+            <div class="block-navigation__list">
+              <div class="block-navigation__sub-item"><a href="#">Ehandel</a></div>
+              <div class="block-navigation__sub-item"><a href="#">udbud</a></div>
+              <div class="block-navigation__sub-item"><a href="#">UngeGuiden</a></div>
+              <div class="block-navigation__sub-item"><a href="#">...</a></div>
+            </div>
+            <div class="block-navigation__button hidden-on-mobile"><a class="btn btn--bg-gray" href="#">Se alle</a></div>
+          </div>
+        </div>
+
+         <div class="block-navigation__item js-navigation__height">
+           <div class="block-navigation__inner">
+            <h3 class="block-navigation__title"><a href="#">Indkøb</a></h3>
+            <div class="block-navigation__list">
+              <div class="block-navigation__sub-item"><a href="#">Affaldssortering</a></div>
+              <div class="block-navigation__sub-item"><a href="#">Flagdage</a></div>
+              <div class="block-navigation__sub-item"><a href="#">Intern postliste</a></div>
+              <div class="block-navigation__sub-item"><a href="#">...</a></div>
+            </div>
+            <div class="block-navigation__button hidden-on-mobile"><a class="btn btn--bg-gray" href="#">Se alle</a></div>
+          </div>
+        </div>
+      {% endfor %}
     </div>
   </div>
 {% endblock %}

@@ -10,6 +10,7 @@ libraries:
   - intranet/media.match
   - intranet/bootstrap-select
   - intranet/tipso
+  - intranet/jquery.matchHeight-min
   - intranet/global-styling
 
 regions:
