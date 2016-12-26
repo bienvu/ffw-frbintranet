@@ -171,6 +171,11 @@
       "id":"FK-108",
       "name":"block-member",
       "group":"component"
+    },
+    {
+      "id":"FK-88",
+      "name":"block-group-member",
+      "group":"component"
     }
   ]
 }
