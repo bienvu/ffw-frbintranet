@@ -49,38 +49,50 @@
       &.active {
         > a {
           color: $green-64;
-          margin-bottom: rem(8px);
-          padding: rem(10px 0 0 15px);
+          margin-bottom: rem(3px);
+          padding: rem(8px 0 0 38px);
+          text-indent: -22px;
 
           &:before {
             @extend .icon-arrow-right:before;
           }
         }
 
-        &.expanded > a {
-          &:before {
-            @extend .icon-arrow-down:before;
+        &.expanded {
+          padding-bottom: 4px;
+
+          > a {
+            &:before {
+              @extend .icon-arrow-down:before;
+            }
           }
         }
 
         > ul {
-          padding-left: rem(20px);
+          padding-left: rem(14px);
 
           a {
             padding-top: 0;
-            padding-bottom: 0;
 
             &:before {
               content: '';
             }
           }
 
+          ul {
+            padding-left: rem(22px);
+          }
+
           li {
+            margin-bottom: rem(3px);
+            padding-bottom: 0;
+
             &.active {
               margin-bottom: 0;
+              padding-bottom: 0;
 
               > a {
-                padding-left: rem(20px);
+                padding-left: rem(42px);
 
                 &:before {
                   @extend .icon-arrow-right:before;
@@ -100,7 +112,10 @@
       }
 
       a {
-        padding-left: rem(11px);
+        padding-left: rem(18px);
+        text-indent: -7px;
+        font-size: rem(15.5px);
+        letter-spacing: rem(-.6px);
 
         &:before {
           @extend %icons;
@@ -112,11 +127,11 @@
     }
 
     > li {
-      margin-bottom: rem(14px);
+      margin-bottom: rem(8px);
 
       &.active {
-        border-bottom: 2px solid $green-64;
-        border-top: 2px solid $green-64;
+        border-bottom: 2px solid $green-ae;
+        border-top: 2px solid $green-ae;
       }
     }
   }

@@ -1,42 +1,40 @@
 .block-profile {
   @extend %clearfix;
+  margin-bottom: rem(10px);
+  padding: rem(30px 20px 38px);
+
+  @include susy-media(mobileLarge) {
+    padding: rem(20px 30px 38px);
+  }
 
   &__image {
-    line-height: 0;
-    padding-bottom: rem(10px);
-    padding-top: rem(10px);
+    margin-bottom: rem(15px);
+    text-align: center;
 
     @include susy-media(mobileLarge) {
       float: left;
-      width: 16%;
+      margin-top: rem(10px);
+    }
+
+    img {
+      border-radius: 100%;
+      height: rem(150px);
+      margin-right: rem(20px);
+      width: rem(150px);
     }
   }
 
-  &__info {
-    @extend %clearfix;
-    font-size: rem(16px);
-    line-height: rem(26px);
-    padding-top: rem(6px);
+  &__content {
+    overflow: hidden;
+  }
 
-    @include susy-media(mobileLarge) {
-      float: left;
-      padding-left: rem(20px);
-      width: 84%;
-    }
+  &__name {
+    margin-bottom: rem(2px);
+    margin-top: 0;
+  }
 
-    &__item {
-      padding-bottom: rem(20px);
-      padding-right: rem(30px);
-
-      @include susy-media(mobileLarge) {
-        float: left;
-        padding-bottom: rem(20px);
-        width: 50%;
-      }
-
-      p {
-        margin-bottom: 0;
-      }
-    }
+  &__mail {
+    margin-bottom: rem(27px);
+    word-break: break-all;
   }
 }

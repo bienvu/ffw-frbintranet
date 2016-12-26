@@ -33,6 +33,10 @@
       top: 50%;
       transform: translate(0,-50%);
     }
+
+    &:hover {
+      color: $green-64;
+    }
   }
 
   .list--icon {
