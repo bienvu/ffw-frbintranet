@@ -166,6 +166,11 @@
       "id":"FK-86",
       "name":"block-list-topic",
       "group":"component"
+    },
+    {
+      "id":"FK-108",
+      "name":"block-member",
+      "group":"component"
     }
   ]
 }

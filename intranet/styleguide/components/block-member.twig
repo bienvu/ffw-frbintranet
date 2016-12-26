@@ -1,0 +1,16 @@
+{% block blockMember %}
+  <div class="container">
+    <div class="block-member bg--bird">
+      <h3 class="block-member__title">Medlemer</h3>
+      <div class="block-member__list">
+        {% for i in 0..4 %}
+          <div class="block-member__item">
+            <div class="block-member__image"><img src="http://uploads.webflow.com/57f3afc6fbae76684da14d1a/5811bad47ce93128786adcfb_Anne%20Nielsen.jpg"></div>
+            <div class="block-member__content"><a href="#" class="link--underline">nick.ellegaard@frederiksberg.dk</a></div>
+          </div>
+        {% endfor %}
+      </div>
+      <div class="block-member__more-link hidden-on-mobile "><a href="#" class="btn">Se alle medlemmer</a></div>
+    </div>
+  </div>
+{% endblock %}

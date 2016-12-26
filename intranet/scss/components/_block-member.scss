@@ -1,0 +1,57 @@
+.block-member {
+  margin-bottom: rem(30px);
+  padding: rem(19px 22px 30px);
+
+  @include susy-media(mobileLarge) {
+    padding: rem(19px 30px 30px);
+  }
+
+  &__title {
+    @extend %icon-position;
+    @extend .icon-groups;
+    color: $primary-color;
+    line-height: 1.2;
+    margin-bottom: rem(16px);
+    padding-left: rem(50px);
+    position: relative;
+
+    &:before {
+      font-size: rem(18px);
+    }
+  }
+
+  &__item {
+    @extend %clearfix;
+    margin-bottom: rem(24px);
+  }
+
+  &__image {
+    float: left;
+
+    img {
+      border-radius: 100%;
+      height: rem(40px);
+      margin-right: rem(5px);
+      width: rem(40px);
+
+      @include susy-media(mobileLarge) {
+        margin-right: rem(20px);
+      }
+    }
+  }
+
+  &__content {
+    font-size: rem(14px);
+    overflow: hidden;
+    padding-top: rem(7px);
+    word-break: break-all;
+
+    @include susy-media(mobileLarge) {
+      font-size: rem(15px);
+    }
+  }
+
+  &__more-link {
+    padding-top: rem(13px);
+  }
+}

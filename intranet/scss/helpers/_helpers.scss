@@ -140,3 +140,15 @@
     }
   }
 }
+
+%icon-position,
+.icon-position {
+  &:before {
+    @extend %icons;
+    font-size: rem(23px);
+    left: rem(11px);
+    line-height: 1.7;
+    position: absolute;
+    top: 0;
+  }
+}
