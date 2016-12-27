@@ -1,0 +1,50 @@
+{% set group_member = [
+    {
+      'group_member_title' : 'Vuggestuen Solmarken',
+      'group_member_text' : '​Indlæg: Vi skal have kageordningen på plads, vil alle melde deres drømmekage ind'
+    },
+    {
+      'group_member_title' : 'Rådhuset,Toiletter lukkes 0.001 og 0.002 ombygning',
+      'group_member_text' : 'Toileterne i stueetagen lukkes i perioden frem til d. 23.09.2016 Der vil kunne forekomme en del støj i perioden, håber på forståelse håber på forståelse Pga. ombygning Vh Carsten'
+    },
+    {
+      'group_member_title' : 'Vuggestuen Solmarken',
+      'group_member_text' : 'Fil: Hermed referat fra sidste personalemøde'
+    },
+    {
+      'group_member_title' : 'Vuggestuen Solmarken',
+      'group_member_text' : 'Kommentar: Jeg er enig, vi bør straks få sat nogen til at'
+    },
+    {
+      'group_member_title' : 'Vuggestuen Solmarken',
+      'group_member_text' : 'Indlæg: Vi skal have kageordningen på plads, vil alle melde deres drømmekage ind'
+    },
+    {
+      'group_member_title' : 'Rådhuset,Toiletter lukkes 0.001 og 0.002 ombygning',
+      'group_member_text' : 'Toileterne i stueetagen lukkes i perioden frem til d. 23.09.2016 Der vil kunne forekomme en del støj i perioden, håber på forståelse håber på forståelse Pga. ombygning Vh Carsten'
+    },
+  ]
+%}
+{% block GroupMember %}
+  <div class="container">
+    <div class="block-group-member bg--bird">
+      <h2 class="pane-title"><a href="#">Mine grupper</a></h2>
+      <div class="block-group-member__list">
+        {% for item in group_member %}
+          <div class="block-group-member__item">
+            <div class="block-group-member__image"><img src="http://uploads.webflow.com/57f3afc6fbae76684da14d1a/5811bad47ce93128786adcfb_Anne%20Nielsen.jpg"></div>
+            <div class="block-group-member__content">
+              <div class="meta">
+                <div class="meta__item meta__link"><a href="#">NYHED</a></div>
+                <div class="meta__item meta__date">18. aug 2016 </div>
+              </div>
+              <h4 class="block-group-member__title"><a href="#">{{ item.group_member_title }}</a></h4>
+              <div class="block-group-member__text"><a href="#"><p>{{ item.group_member_text }}</p></a></div>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+      <div class="block-group-member__more-link hidden-on-mobile "><a href="#" class="btn">Se alt mit indhold</a></div>
+    </div>
+  </div>
+{% endblock %}
