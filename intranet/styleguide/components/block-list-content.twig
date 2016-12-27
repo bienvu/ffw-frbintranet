@@ -1,17 +1,24 @@
-<!-- <div class="container">
-  {% block ListContent %}
+{% block ListContent %}
+  <div class="container">
+    <h3>List content</h3>
     <div class="block-list-content">
       <div class="block-list-content__item">
         <div class="meta">
-          <div class="meta__item meta__link link--green"><a href="#">{{ item.meta_link }}</a></div>
-          <div class="meta__item meta__date">{{ item.meta_date }} </div>
+          <div class="meta__item meta__date">18. aug 2016</div>
         </div>
-        <h4 class="block-list-content__title">{{ item.content_title }}</h4>
-        <div class="block-list-content__text"><a href="#"><p>{{ item.content_text }}</p></a></div>
+        <h4 class="block-list-content__title"><a href="#">[Løst] Doc2mail er pt. utilgængeligt</a></h4>
+      </div>
+      <div class="block-list-content__item">
+        <div class="meta">
+          <div class="meta__item meta__link"><a href="#">SÆLGES</a></div>
+          <div class="meta__item meta__date">18. aug 2016</div>
+        </div>
+        <h4 class="block-list-content__title"><a href="#">[Løst] Doc2mail er pt. utilgængeligt</a></h4>
+        <div class="block-list-content__text"><a href="#"><p>Næsten helt ny Dunlopillo boxmadras seng sælges. To enkeltsendge af 80x200. En stor samlet topmadras. Naturlatex med 7 zoner. Hårdhed medium. 3D stof i koksgrå. Stålben H: 20 cm. Samlebeslag så sengen</p></a></div>
       </div>
     </div>
-  {% endblock %}
-</div> -->
+  </div>
+{% endblock %}
 
 <div class="container">
   {% block ITDrift %}
@@ -38,7 +45,7 @@
             <h4 class="block-list-content__title"><a href="#"> Leverance problemer med mobiltelefoner</a></h4>
           </div>
         </div>
-        <div class="block-it-drift__more-link"><a href="#" class="btn">Se flere</a></div>
+        <div class="block-it-drift__more-link hidden-on-mobile"><a href="#" class="btn">Se flere</a></div>
       </div>
     </div>
   {% endblock %}
@@ -67,7 +74,7 @@
             <h4 class="block-list-content__title"><a>Leverance problemer med mobiltelefoner</a></h4>
           </div>
         </div>
-        <div class="block-aktivite__more-link"><a href="#" class="btn">Hele kalenderen</a></div>
+        <div class="block-aktivite__more-link hidden-on-mobile"><a href="#" class="btn">Hele kalenderen</a></div>
       </div>
     </div>
   {% endblock %}
@@ -102,7 +109,7 @@
             <div class="block-list-content__text"><a href="#"><p>Ægte ray ban købes 350kr</p></a></div>
           </div>
         </div>
-        <div class="block-market_more-link"><a href="#" class="btn">Se flere</a></div>
+        <div class="block-market__more-link hidden-on-mobile"><a href="#" class="btn">Se flere</a></div>
       </div>
     </div>
   {% endblock %}

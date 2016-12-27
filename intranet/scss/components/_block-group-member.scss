@@ -1,0 +1,96 @@
+.block-group-member {
+  margin-left: rem(-15px);
+  margin-right: rem(-15px);
+  padding: rem(20px 8px 10px);
+
+  @include susy-media(mobileLandscape) {
+    margin-left: 0;
+    margin-right: 0;
+    padding: rem(20px 20px 10px);
+  }
+
+  .pane-title {
+    @extend %pane-title-icon;
+    @extend .icon-groups;
+    padding-left: rem(50px);
+
+    &:before {
+      @extend %icon-position;
+      left: rem(11px);
+      line-height: 1.7;
+    }
+  }
+
+  &__list {
+    margin-bottom: rem(21px);
+    padding-left: rem(10px);
+  }
+
+  &__item {
+    margin-bottom: rem(25px);
+
+    @include susy-media(mobileLandscape) {
+      margin-bottom: rem(7px);
+    }
+  }
+
+  &__image {
+    float: left;
+
+    img {
+      border-radius: 100%;
+      height: rem(40px);
+      margin-right: rem(10px);
+      width: rem(40px);
+
+      @include susy-media(mobileLandscape) {
+        margin-right: rem(20px);
+      }
+    }
+  }
+
+  &__content {
+    @include susy-media(mobileLandscape) {
+      overflow: hidden;
+    }
+  }
+
+  .meta {
+    margin-bottom: 0;
+    padding-top: rem(10px);
+
+    @include susy-media(mobileLandscape) {
+      padding-top: 0;
+    }
+  }
+
+  &__title {
+    margin-bottom: rem(2px);
+    margin-top: rem(5px);
+
+    @include susy-media(mobileLandscape) {
+      margin-top: 0;
+    }
+  }
+
+  &__text {
+    font-size: rem(14px);
+    line-height: rem(22px);
+
+    a {
+      color: $gray;
+
+      &:hover {
+        color: $primary-color-hover;
+      }
+    }
+
+    p {
+      margin-bottom: rem(10px);
+    }
+  }
+
+  &__more-link {
+    padding-left: rem(10px);
+  }
+}

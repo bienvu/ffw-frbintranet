@@ -7,7 +7,6 @@
   }
 
   &__title {
-    @extend %icon-position;
     @extend .icon-groups;
     color: $primary-color;
     line-height: 1.2;
@@ -16,7 +15,9 @@
     position: relative;
 
     &:before {
-      font-size: rem(18px);
+      @extend %icon-position;
+      left: rem(11px);
+      line-height: 1.7;
     }
   }
 

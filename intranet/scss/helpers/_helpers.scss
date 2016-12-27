@@ -145,10 +145,19 @@
 .icon-position {
   &:before {
     @extend %icons;
-    font-size: rem(23px);
-    left: rem(11px);
-    line-height: 1.7;
+    color: $primary-color;
+    font-size: rem(18px);
+    left: 0;
     position: absolute;
     top: 0;
   }
+}
+
+%pane-title-icon,
+.pane-title-icon {
+  color: $primary-color;
+  font-size: rem(22px);
+  line-height: rem(22px);
+  margin-bottom: rem(20px);
+  position: relative;
 }
