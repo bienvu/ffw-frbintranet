@@ -1,7 +1,7 @@
 .block-comment {
   &__item {
     @extend %clearfix;
-    margin-bottom: rem(24px);
+    margin-bottom: rem(10px);
   }
 
   &__indented {
@@ -14,37 +14,36 @@
 
   &__author-picture {
     float: left;
-    width: 60px;
+    line-height: 0;
 
     img {
       border-radius: 100%;
       height: rem(60px);
+      margin: rem(10px 20px 0 0);
       width: rem(60px);
-    }
-
-    + .block-comment__content {
-        margin-left: rem(80px);
     }
   }
 
-  &__submitted {
+  &__submitted,
+  &__content {
     overflow: hidden;
   }
 
   &__author-name,
   &__post-date {
-    @include opensans-semibold;
     float: left;
-    font-size: rem(17px);
+    font-size: rem(16px);
     line-height: rem(24px);
     margin-bottom: rem(2px);
   }
 
   &__author-name {
+    @include opensans-bold;
     padding-right: rem(10px);
   }
 
   &__post-date {
+    @include opensans-semibold;
     color: $gray-92;
   }
 
