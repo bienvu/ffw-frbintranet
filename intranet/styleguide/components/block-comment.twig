@@ -1,0 +1,59 @@
+{% block blockComment %}
+  <div class="container">
+    <div class="block-comment">
+      <h3 class="block-comment__title">Kommentarer</h3>
+      <div class="block-comment__list">
+        <div class="block-comment__item">
+          <div class="block-comment__content">
+            <div class="block-comment__submitted">
+              <div class="block-comment__author-name"><a href="#">Nick Ellegaard</a></div>
+              <div class="block-comment__post-date">10. aug 2016</div>
+            </div>
+            <div class="block-comment__text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh.</div>
+          </div>
+        </div>
+        <div class="block-comment__item">
+          <div class="block-comment__author-picture"><a href="#"><img src="http://uploads.webflow.com/57f3afc6fbae76684da14d1a/5811bad47ce93128786adcfb_Anne%20Nielsen.jpg"></a></div>
+          <div class="block-comment__content">
+            <div class="block-comment__submitted">
+              <div class="block-comment__author-name"><a href="#">Nick Ellegaard</a></div>
+              <div class="block-comment__post-date">10. aug 2016</div>
+            </div>
+            <div class="block-comment__text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh.</div>
+          </div>
+        </div>
+        <div class="block-comment__indented">
+          <div class="block-comment__item">
+            <div class="block-comment__author-picture"><a href="#"><img src="http://uploads.webflow.com/57f3afc6fbae76684da14d1a/5811bad47ce93128786adcfb_Anne%20Nielsen.jpg"></a></div>
+            <div class="block-comment__content">
+              <div class="block-comment__submitted">
+                <div class="block-comment__author-name"><a href="#">Nick Ellegaard</a></div>
+                <div class="block-comment__post-date">10. aug 2016</div>
+              </div>
+              <div class="block-comment__text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh.</div>
+            </div>
+          </div>
+          <div class="block-comment__indented">
+            <div class="block-comment__item">
+              <div class="block-comment__author-picture"><a href="#"><img src="http://uploads.webflow.com/57f3afc6fbae76684da14d1a/5811bad47ce93128786adcfb_Anne%20Nielsen.jpg"></a></div>
+              <div class="block-comment__content">
+                <div class="block-comment__submitted">
+                  <div class="block-comment__author-name"><a href="#">Nick Ellegaard</a></div>
+                  <div class="block-comment__post-date">10. aug 2016</div>
+                </div>
+                <div class="block-comment__text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <form class="block-comment__form">
+        <label>Din kommentar *</label>
+        <div class="form-textarea-wrapper resizable textarea-processed resizable-textarea">
+          <textarea cols="60" rows="5" class="form-textarea" placeholder="Skriv her (max. xx tegn)"></textarea>
+        </div>
+        <div class="form-actions"><input type="submit" name="op" class="btn" value="Indsend"></div>
+      </form>
+    </div>
+  </div>
+{% endblock %}

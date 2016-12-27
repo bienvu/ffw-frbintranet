@@ -176,6 +176,11 @@
       "id":"FK-88",
       "name":"block-group-member",
       "group":"component"
+    },
+    {
+      "id":"FK-105",
+      "name":"block-comment",
+      "group":"component"
     }
   ]
 }
