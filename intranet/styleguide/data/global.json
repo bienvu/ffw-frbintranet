@@ -199,6 +199,11 @@
       "id":"FK-112",
       "name":"block-list-market",
       "group":"component"
+    },
+    {
+      "id":"FK-87",
+      "name":"block-list-content",
+      "group":"component"
     }
   ]
 }
