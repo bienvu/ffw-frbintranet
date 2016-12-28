@@ -1,14 +1,45 @@
 .block-accordion {
   padding-bottom: rem(40px);
-  padding-top: rem(25px);
 
   &__title {
-    margin-bottom: rem(30px);
+    float: left;
+    margin-bottom: rem(20px);
+    width: 50%;
+
+    @include susy-media(mobileLandscape) {
+      width: 72%;
+    }
+
+    @include susy-media(tablet) {
+      width: 80%;
+    }
+  }
+
+  &__close-button {
+    @include opensans-semibold;
+    color: $primary-color;
+    cursor: pointer;
+    float: right;
+    font-size: rem(11.5px);
+    margin-bottom: rem(5px);
+    margin-top: rem(17px);
+    padding-right: rem(7px);
+    text-align: right;
+    text-transform: uppercase;
+
+    i:before {
+      font-size: rem(12px);
+      font-weight: 600;
+      padding-left: rem(9px);
+    }
+  }
+
+  &__list {
+    clear: both;
   }
 
   &__header {
     @extend .icon-angle-down;
-    // @include fousandm;
     @include opensans-bold;
     background-color: $white;
     border-radius: 0;
@@ -17,9 +48,13 @@
     display: block;
     font-size: rem(15px);
     margin-top: rem(-1px);
-    padding: rem(15px 65px 15px 25px);
+    padding: rem(18px 40px 18px 20px);
     position: relative;
     transition: all 400ms ease 0s;
+
+    @include susy-media(mobileLandscape) {
+      padding: rem(15px 65px 16px 25px);
+    }
 
     &:before {
       @extend %icons;
@@ -27,8 +62,12 @@
       font-weight: 500;
       line-height: 2.725;
       position: absolute;
-      right: rem(30px);
+      right: rem(20px);
       top: 0;
+
+      @include susy-media(mobileLandscape) {
+        right: rem(30px);
+      }
     }
 
     &.active {
@@ -46,6 +85,11 @@
     height: 0;
     opacity: 0;
     overflow-y: hidden;
+    font-size: rem(15px);
+
+    @include susy-media(mobileLandscape) {
+      font-size: $base-font-size;
+    }
 
     &.active {
       background-color: $white;
@@ -122,24 +166,6 @@
           }
         }
       }
-    }
-  }
-
-  &__close-button {
-    // @include fousandm;
-    @include opensans-semibold;
-    color: $primary-color;
-    cursor: pointer;
-    font-size: rem(12px);
-    margin-bottom: rem(5px);
-    padding-right: rem(35px);
-    text-align: right;
-    text-transform: uppercase;
-
-    i:before {
-      font-size: rem(14px);
-      font-weight: 600;
-      padding-left: rem(5px);
     }
   }
 }
