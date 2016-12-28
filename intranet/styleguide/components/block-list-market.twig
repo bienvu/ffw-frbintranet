@@ -1,0 +1,20 @@
+{% block ListMarket %}
+  <div class="container">
+    <div class="block-list-market">
+    {% for i in 0..5 %}
+      <div class="block-list-market__item">
+        <div class="block-list-market__image"><img src="https://unsplash.it/200/150"></div>
+        <div class="block-list-market__content">
+          <div class="meta">
+            <div class="meta__item meta__link"><a href="#">SÆLGES</a></div>
+            <div class="meta__item meta__date">18. aug 2016</div>
+          </div>
+          <h4 class="block-list-market__title"><a href="#">Dunlopillo seng</a></h4>
+          <div class="block-list-market__body"><a href="#"><p>Næsten helt ny Dunlopillo boxmadras seng sælges. To enkeltsendge af 80x200. En stor samlet topmadras. Naturlatex med 7 zoner. Hårdhed medium. 3D stof i koksgrå. Stålben H: 20 cm. Samlebeslag så sengen</p></a></div>
+        </div>
+      </div>
+    {% endfor %}
+    </div>
+  </div>
+  {% include 'pager.twig' %}
+{% endblock %}

@@ -186,6 +186,11 @@
       "id":"FK-107",
       "name":"block-activity",
       "group":"component"
+    },
+    {
+      "id":"FK-112",
+      "name":"block-list-market",
+      "group":"component"
     }
   ]
 }
