@@ -16,7 +16,8 @@
 
     &:before {
       @extend %icon-position;
-      font-size: rem(18px);
+      left: rem(11px);
+      line-height: 1.7;
     }
   }
 

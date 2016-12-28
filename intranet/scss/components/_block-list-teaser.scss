@@ -52,6 +52,15 @@
       }
     }
   }
+
+  &--text-white {
+    .meta {
+      &__date {
+        @include opensans-light;
+        color: $white;
+      }
+    }
+  }
 }
 
 .block-list-teaser {

@@ -181,6 +181,11 @@
       "group":"component"
     },
     {
+      "id":"FK-87",
+      "name":"block-list-content",
+      "group":"component"
+    },
+    {
       "id":"FK-88",
       "name":"block-group-member",
       "group":"component"
