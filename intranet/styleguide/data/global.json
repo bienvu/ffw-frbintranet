@@ -43,7 +43,6 @@
       "group":"helper"
     },
     {
-      "id":"ST-09",
       "name":"button",
       "group":"helper"
     },
@@ -61,11 +60,20 @@
       "group":"component"
     },
     {
+      "name":"block-submenu",
+      "group":"component"
+    },
+    {
       "name":"table",
       "group":"component"
     },
     {
       "name":"block-text",
+      "group":"component"
+    },
+    {
+      "id":"FRED-89",
+      "name":"block-hero",
       "group":"component"
     },
     {
