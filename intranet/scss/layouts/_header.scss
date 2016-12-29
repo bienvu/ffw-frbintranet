@@ -41,9 +41,18 @@
 
 .header {
   padding-top: rem(50px);
+  transition: .3s;
+
+  .block-warning {
+    display: none;
+  }
 
   &.has-warning {
     padding-top: rem(102px);
+
+    .block-warning {
+      display: block;
+    }
   }
 
   &__sticky {

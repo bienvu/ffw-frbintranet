@@ -43,7 +43,6 @@
       "group":"helper"
     },
     {
-      "id":"ST-09",
       "name":"button",
       "group":"helper"
     },
@@ -61,11 +60,20 @@
       "group":"component"
     },
     {
+      "name":"block-submenu",
+      "group":"component"
+    },
+    {
       "name":"table",
       "group":"component"
     },
     {
       "name":"block-text",
+      "group":"component"
+    },
+    {
+      "id":"FRED-89",
+      "name":"block-hero",
       "group":"component"
     },
     {
@@ -173,6 +181,11 @@
       "group":"component"
     },
     {
+      "id":"FK-87",
+      "name":"block-list-content",
+      "group":"component"
+    },
+    {
       "id":"FK-88",
       "name":"block-group-member",
       "group":"component"
@@ -185,6 +198,16 @@
     {
       "id":"FK-107",
       "name":"block-activity",
+      "group":"component"
+    },
+    {
+      "id":"FK-112",
+      "name":"block-list-market",
+      "group":"component"
+    },
+    {
+      "id":"FK-87",
+      "name":"block-list-content",
       "group":"component"
     }
   ]

@@ -1,4 +1,5 @@
 .block-navigation {
+  @extend %clearfix;
   padding-bottom: rem(10px);
   padding-top: rem(4px);
 
@@ -6,112 +7,96 @@
     padding-bottom: rem(16px);
   }
 
-  &__list {
-    @extend %clearfix;
-  }
-
   &__item {
-    border-bottom: rem(1px) solid $green-e1;
-    padding: rem(31px 15px 20px);
+    padding: rem(2px);
 
-    @include susy-media(tabletOnly) {
-      border-bottom: 0;
+    @include susy-media(tablet) {
       float: left;
       width: 50%;
-      padding: rem(31px 20px 20px);
 
       &:nth-child(2n + 1) {
-        clear: left;
+        clear: both;
       }
     }
 
     @include susy-media(desktop) {
-      border-bottom: 0;
-      float: left;
-      padding: rem(31px 30px 20px);
       width: 33.33%;
+
+      &:nth-child(2n + 1) {
+        clear: none;
+      }
 
       &:nth-child(3n + 1) {
         clear: both;
       }
     }
+  }
 
-    @include susy-media(desktop-wide) {
-      padding: rem(31px 30px 30px);
+  &__inner {
+    background-color: rgba(157, 177, 171, .1);
+    height: 100%;
+    padding: rem(10px 20px 20px);
+    border-bottom: rem(1px) solid $green-e1;
+
+    @include susy-media(tablet) {
+      border-bottom: 0;
+    }
+
+    &:hover {
+      background-color: $green-f7;
+    }
+  }
+
+  &__list {
+    @extend %clearfix;
+  }
+
+  &__sub-item {
+    @include opensans-semibold;
+    float: left;
+    font-size: rem(15px);
+    line-height: rem(22px);
+    padding-right: rem(2px);
+
+    &:after {
+      content: '/';
+      font-size: rem(17px);
     }
 
     &:last-of-type {
-      border-bottom: 0;
-    }
-  }
-
-  &__icon {
-    float: left;
-    position: relative;
-    width: auto;
-
-    a {
-      background-color: $primary-color;
-      border-radius: 100%;
-      color: $white;
-      cursor: pointer;
-      display: block;
-      font-size: rem(27px);
-      height: rem(50px);
-      line-height: 1.7;
-      padding: rem(8px 12px);
-      position: relative;
-      text-align: center;
-      transition: all .5 ease 0s;
-      width: rem(50px);
-
-      &:hover {
-        background-color: $primary-color-hover;
-        transform: scale(1.1, 1.1);
+      &:after {
+        content: '';
       }
     }
 
-    img {
-      left: 50%;
-      max-width: rem(25px);
-      position: absolute;
-      top: 50%;
-      transform: translate(-50%, -50%);
-    }
-  }
+    a {
+      color: $gray;
 
-  &__content {
-    overflow: hidden;
-    padding-left: rem(20px);
-
-    @include susy-media(desktop-wide) {
-      padding-right: rem(20px);
-    }
-  }
-
-  .list {
-    line-height: rem(25px);
-
-    @include susy-media(desktop) {
-      line-height: rem(22px);
-    }
-
-    li {
-      margin-bottom: rem(15px);
-      padding-top: 0;
+      &:hover {
+        color: $primary-color-hover;
+      }
     }
   }
 
   &__title {
-    font-size: rem(22px);
-    margin-bottom: rem(8px);
+    font-size: rem(19px);
+    line-height: rem(22px);
+    margin-bottom: rem(9px);
   }
 
   &__button {
-    margin-top: rem(27px);
+    margin-top: rem(22px);
 
     .btn {
-      font-weight: 600;
+      @include opensans-bold;
+
+      &--bg-gray {
+        &:active,
+        &:hover {
+          background-color: $green-59;
+          color: $white;
+        }
+      }
     }
   }
 }

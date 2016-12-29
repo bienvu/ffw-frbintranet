@@ -1,7 +1,7 @@
 .meta {
-  @extend %clearfix;
   font-size: rem(14px);
   margin-bottom: rem(8px);
+  overflow: hidden;
 
   &__date,
   &__link {
@@ -49,6 +49,15 @@
         &:hover {
           color: $green-64;
         }
+      }
+    }
+  }
+
+  &--text-white {
+    .meta {
+      &__date {
+        @include opensans-light;
+        color: $white;
       }
     }
   }
