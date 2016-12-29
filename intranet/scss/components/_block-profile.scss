@@ -1,10 +1,10 @@
 .block-profile {
   @extend %clearfix;
   margin-bottom: rem(10px);
-  padding: rem(30px 20px 38px);
+  padding: rem(30px 20px 35px);
 
   @include susy-media(mobileLarge) {
-    padding: rem(20px 30px 38px);
+    padding: rem(20px 30px 35px);
   }
 
   &__image {
@@ -33,8 +33,25 @@
     margin-top: 0;
   }
 
-  &__mail {
+  &__mail,
+  &__phone {
     margin-bottom: rem(27px);
     word-break: break-all;
+  }
+
+  &__body {
+    font-size: rem(15.5px);
+    line-height: rem(26px);
+  }
+
+  &--image-small {
+    .block-profile {
+      &__image {
+        img {
+          height: rem(60px);
+          width: rem(60px);
+        }
+      }
+    }
   }
 }
