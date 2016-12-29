@@ -18,10 +18,6 @@
   ],
   "list_components":[
     {
-      "name":"block-submenu",
-      "group":"component"
-    },
-    {
       "name":"headings",
       "group":"basic",
       "hidecode":true
@@ -52,6 +48,10 @@
     },
     {
       "name":"list",
+      "group":"component"
+    },
+    {
+      "name":"block-submenu",
       "group":"component"
     },
     {
