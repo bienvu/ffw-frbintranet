@@ -34,7 +34,7 @@
 
   &__mail {
     display: inline-block;
-    font-size: rem(14px);
+    font-size: rem(12px);
     word-break: break-all;
   }
 
@@ -45,6 +45,8 @@
 }
 
 .block-social {
+  float: right;
+
   &__list-sub {
     position: relative;
 
