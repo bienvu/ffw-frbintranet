@@ -35,10 +35,12 @@
       width: rem(40px);
     }
 
-    + .block-activity__content {
+    + .block-activity {
+      &__content {
         @include susy-media(mobileLarge) {
           margin-left: rem(60px);
         }
+      }
     }
   }
 

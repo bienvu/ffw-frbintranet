@@ -40,16 +40,20 @@
   &__link {
     @include opensans-semibold;
     text-transform: uppercase;
+  }
 
-    &.link--green {
-      a {
-        &,
-        &:focus,
-        &:visited,
-        &:hover {
-          color: $green-64;
-        }
+  .link--green {
+    a {
+      &,
+      &:focus,
+      &:visited,
+      &:hover {
+        color: $green-64;
       }
+    }
+
+    &:hover {
+      color: $green-64;
     }
   }
 
